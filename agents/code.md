@@ -13,23 +13,25 @@ How code is written, what it may commit its callers to, and what it may cost. `a
 ## Architecture
 
 - **A workspace of applications and packages.** Applications are deployed, packages are shared. An application depends on packages, a package depends only on packages below it, and nothing depends on an application.
-- **A package is self-contained.** It declares exactly the dependencies it imports, is consumed as source with no build step, and knows nothing about any consumer.
+- **A package is self-contained.** It declares exactly the dependencies it imports, is consumed as source with no build step, and knows nothing about any consumer. A package exists for code with two consumers. One consumer is a folder, not a package.
 - **The design system owns the stylesheet and every token.** An application's stylesheet imports it and adds only that application's chrome.
-- **Code is organized by layer, then by kind.** A layer says what code is for: routes, features, content, shared. A kind says what code is: components, hooks, functions, types, config. Every file is one kind in one layer.
-- **Dependencies flow down.** A layer imports only from layers below it, never from above and never from a sibling. What two features share moves down a layer. What two applications share moves into a package. No cycles.
-- **A feature owns everything about itself.** Its components, hooks, functions, and types live in its folder. Deleting the folder and its routes removes the feature.
-- **Routes are wiring.** A route reads params, calls one feature, and renders.
-- **Authored content is organized by subject, not by kind.** The types, config, and registries that describe it sit beside it.
+- **An application is six folders, each one sentence long.** `app` is the routes, `content` is the words, `components` is the parts, `config` is the facts, `lib` is the helpers, `types` is the shapes. Nothing else sits at the top.
+- **Dependencies flow down.** Routes import anything. Content imports components, helpers, and types. Components import helpers and types. Helpers import config and types. Nothing imports upward, and nothing imports a route. What two applications share moves into a package. No cycles.
+- **Routes are wiring.** A route reads its params, finds its article in an index, sets its metadata, and renders. A layout owns the frame every page in it shares. A route holds no markup beyond what places the page.
+- **Content mirrors the site.** `content/` holds authored articles and nothing else, laid out as the URLs are. The page at `/ui/components/button` is written at `content/ui/components/button.tsx`, and the demos it shows sit in `content/ui/components/button/`.
+- **A collection is a folder and an index beside it.** `content/ui/` holds the articles, `content/ui.ts` is its table of contents: which articles, in what order, under which headings. Order is a decision, so the index is written by hand and imports what it lists.
+- **One shape for everything the site says.** Every page, note, and writing is an `Article`. A collection ordered by date holds `DatedArticle`. There is no third content type, and no type for a listing, because a listing is an array of articles.
+- **Components take what they show.** A sidebar takes a nav, a list takes its items. A component never reaches into `content/` for them, so the same component serves every collection.
 
 ## Files
 
-- **A kind folder holds one kind, and the kind fixes the extension.** Components are `.tsx`, everything else is `.ts`. Anything that renders is a component. The two extensions never share a folder.
-- **Nothing sits at a layer root** except files the framework names.
-- **A kind folder is flat until a family needs a name.** A subfolder holds siblings that live and die together. It is never a second level of kinds.
+- **A kind folder holds one kind, and the kind fixes the extension.** Components are `.tsx`, everything else is `.ts`. Anything that renders is a component. The two extensions never share a folder. Route folders follow the framework.
+- **Depth is ownership, never category.** A kind folder is flat. A subfolder holds what one file owns and is named after that file, `select.tsx` beside `select/`. It is never a second level of kinds.
+- **Nothing sits at a layer root** except files the framework names and a collection's index.
 - **One file, one export, named after it.** A family that shares a private base may share a file. A compound component exports one namespace, and past three hundred lines moves its parts into a private folder of the same name.
 - **Types live with what they describe.** Props with the component, derived types with their value, everything else in `types/`.
 - **Tests sit beside what they test.**
-- **Registries that mirror the file system are generated** and say so on their first line. Lists that carry a decision are hand-authored in `config/`.
+- **Nothing is generated from the file system.** A list of files is a decision, written by hand. Code generated from data says so on its first line.
 - **No index files.**
 
 ## Imports
