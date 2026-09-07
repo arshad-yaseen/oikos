@@ -1,6 +1,6 @@
 import { A } from "@arshad.fyi/ui/components/prose/anchor";
 import { P } from "@arshad.fyi/ui/components/prose/paragraph";
-import type { Article } from "@/types/article";
+import type { Article } from "@/lib/content";
 
 export const introduction = {
   slug: "introduction",

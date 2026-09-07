@@ -2,13 +2,13 @@ import { Basic } from "@/content/ui/components/avatar/basic";
 import { Sizes } from "@/content/ui/components/avatar/sizes";
 import { Fallback } from "@/content/ui/components/avatar/fallback";
 import { Group } from "@/content/ui/components/avatar/group";
-import { Demo } from "@/components/demo";
-import { PropsTable } from "@/components/props-table";
+import { Demo } from "@/components/book/demo";
+import { PropsTable } from "@/components/book/props-table";
 import { A } from "@arshad.fyi/ui/components/prose/anchor";
 import { H2 } from "@arshad.fyi/ui/components/prose/heading";
 import { InlineCode } from "@arshad.fyi/ui/components/prose/inline-code";
 import { P } from "@arshad.fyi/ui/components/prose/paragraph";
-import type { Article } from "@/types/article";
+import type { Article } from "@/lib/content";
 
 export const avatar = {
   slug: "avatar",

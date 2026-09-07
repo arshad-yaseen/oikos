@@ -1,5 +1,4 @@
-import { getSourceUrl } from "@/lib/get-source-url";
-import type { Article } from "@/types/article";
+import { type Article, sourceUrl } from "@/lib/content";
 import { Button } from "@arshad.fyi/ui/components/button";
 import { P } from "@arshad.fyi/ui/components/prose/paragraph";
 
@@ -17,7 +16,7 @@ export function ArticleHeader({ article }: ArticleHeaderProps) {
             variant="plain"
             size="sm"
             className="shrink-0"
-            render={<a href={getSourceUrl(article.source)} target="_blank" rel="noreferrer" />}
+            render={<a href={sourceUrl(article.source)} target="_blank" rel="noreferrer" />}
           >
             Source code
           </Button>

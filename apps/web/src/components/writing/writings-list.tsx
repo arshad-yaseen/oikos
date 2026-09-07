@@ -1,7 +1,7 @@
 import type { Route } from "next";
 import Link from "next/link";
-import { formatDate } from "@/lib/format-date";
-import type { DatedArticle } from "@/types/article";
+import { formatDate } from "@/lib/date";
+import type { DatedArticle } from "@/lib/content";
 import { cn } from "@arshad.fyi/ui/lib/cn";
 
 type WritingsListProps = {

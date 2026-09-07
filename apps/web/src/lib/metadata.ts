@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { og } from "@/config/og";
-import { site } from "@/config/site";
-import { ogImageUrl } from "@/lib/og-image-url";
+import { site } from "@/lib/site";
+
+export const OG_SIZE = { width: 1200, height: 630 } as const;
+
+/** Root-relative, so `metadataBase` resolves it. Served by `app/og/route.tsx`. */
+export function ogImageUrl(title: string, subtitle: string): string {
+  return `/og?${new URLSearchParams({ title, subtitle })}`;
+}
 
 type CreateMetadataOptions = {
   title: string;
   description?: string;
   /** Root-relative path, resolved against `metadataBase` for canonical and OG URLs. */
   path: string;
-  type?: "website" | "article";
-  /** ISO 8601 date, only used when `type` is `"article"`. */
+  /** ISO 8601 date. Marks the page as an article rather than a website. */
   publishedTime?: string;
 };
 
@@ -17,10 +21,9 @@ export function createMetadata({
   title,
   description = site.description,
   path,
-  type = "website",
   publishedTime,
 }: CreateMetadataOptions): Metadata {
-  const image = { url: ogImageUrl(title, site.name), ...og.size, alt: title };
+  const image = { url: ogImageUrl(title, site.name), ...OG_SIZE, alt: title };
 
   const shared = {
     title,
@@ -31,10 +34,9 @@ export function createMetadata({
     images: [image],
   };
 
-  const openGraph: Metadata["openGraph"] =
-    type === "article"
-      ? { ...shared, type: "article", publishedTime, authors: [site.author.name] }
-      : { ...shared, type: "website" };
+  const openGraph: Metadata["openGraph"] = publishedTime
+    ? { ...shared, type: "article", publishedTime, authors: [site.author.name] }
+    : { ...shared, type: "website" };
 
   return {
     title,

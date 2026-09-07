@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { PropsWithChildren } from "react";
-import { Preview } from "@/components/preview";
+import { Preview } from "@/components/book/preview";
 import { CodeBlock } from "@arshad.fyi/ui/components/code-block";
 
 const CONTENT_DIR = join(process.cwd(), "src/content");

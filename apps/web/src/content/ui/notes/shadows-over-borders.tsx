@@ -1,9 +1,9 @@
-import { Preview } from "@/components/preview";
+import { Preview } from "@/components/book/preview";
 import { Callout } from "@arshad.fyi/ui/components/prose/callout";
 import { InlineCode } from "@arshad.fyi/ui/components/prose/inline-code";
 import { P } from "@arshad.fyi/ui/components/prose/paragraph";
 import { cn } from "@arshad.fyi/ui/lib/cn";
-import type { DatedArticle } from "@/types/article";
+import type { DatedArticle } from "@/lib/content";
 
 type SquareProps = {
   className: string;

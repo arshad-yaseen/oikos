@@ -1,6 +1,6 @@
-import type { DatedArticle } from "@/types/article";
+import type { DatedArticle } from "@/lib/content";
 import type { PropsWithChildren } from "react";
-import { formatDate } from "@/lib/format-date";
+import { formatDate } from "@/lib/date";
 import { cn } from "@arshad.fyi/ui/lib/cn";
 
 type WritingArticleProps = PropsWithChildren<{

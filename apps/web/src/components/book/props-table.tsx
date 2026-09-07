@@ -1,4 +1,8 @@
-import type { PropDefinition } from "@/types/prop-definition";
+type PropDefinition = {
+  name: string;
+  type: string;
+  default?: string;
+};
 
 type PropsTableProps = {
   rows: PropDefinition[];

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { JsonLd } from "@/components/json-ld";
-import { WritingArticle } from "@/components/writing-article";
+import { JsonLd } from "@/components/site/json-ld";
+import { WritingArticle } from "@/components/writing/writing-article";
 import { writings } from "@/content/writings";
-import { articleJsonLd } from "@/lib/article-json-ld";
-import { createMetadata } from "@/lib/create-metadata";
+import { articleJsonLd } from "@/lib/json-ld";
+import { createMetadata } from "@/lib/metadata";
 
 type WritingPageProps = {
   params: Promise<{ slug: string }>;
@@ -28,7 +28,6 @@ export async function generateMetadata({ params }: WritingPageProps): Promise<Me
     title: writing.title,
     description: writing.description,
     path: `/writings/${writing.slug}`,
-    type: "article",
     publishedTime: writing.date,
   });
 }

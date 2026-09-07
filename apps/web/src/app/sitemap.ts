@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/config/site";
 import { ui } from "@/content/ui";
 import { writings } from "@/content/writings";
+import { pages } from "@/lib/content";
+import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url;
@@ -15,12 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly" as const,
       priority: 0.7,
     })),
-    ...ui.nav.flatMap((group) =>
-      group.items.map((item) => ({
-        url: `${base}${item.href}`,
-        changeFrequency: "monthly" as const,
-        priority: 0.5,
-      })),
-    ),
+    ...pages(ui).map((page) => ({
+      url: `${base}${page.href}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
   ];
 }

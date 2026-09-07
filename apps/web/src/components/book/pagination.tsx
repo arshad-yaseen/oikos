@@ -3,7 +3,7 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { NavGroup } from "@/types/nav";
+import type { Page } from "@/lib/content";
 import { Icon } from "@arshad.fyi/ui/components/icon";
 import { cn } from "@arshad.fyi/ui/lib/cn";
 
@@ -15,21 +15,20 @@ const CHEVRON = cn(
 );
 
 type PaginationProps = {
-  nav: NavGroup[];
+  /** In reading order. */
+  pages: Page[];
 };
 
-/** The sidebar flattened, so previous and next are neighbours in one list. */
-export function Pagination({ nav }: PaginationProps) {
+export function Pagination({ pages }: PaginationProps) {
   const pathname = usePathname();
-  const links = nav.flatMap((group) => group.items);
-  const index = links.findIndex((link) => link.href === pathname);
+  const index = pages.findIndex((page) => page.href === pathname);
 
   if (index === -1) {
     return null;
   }
 
-  const previous = links[index - 1];
-  const next = links[index + 1];
+  const previous = pages[index - 1];
+  const next = pages[index + 1];
 
   return (
     <nav
@@ -42,7 +41,7 @@ export function Pagination({ nav }: PaginationProps) {
           <Icon name="ChevronLeft" className={cn(CHEVRON, "-ml-6")} />
           <span className="flex flex-col gap-1">
             <span className="text-sm text-neutral-600 dark:text-neutral-400">Previous</span>
-            <span className="text-sm font-medium">{previous.title}</span>
+            <span className="text-sm font-medium">{previous.article.title}</span>
           </span>
         </Link>
       ) : (
@@ -52,7 +51,7 @@ export function Pagination({ nav }: PaginationProps) {
         <Link href={next.href as Route} className="group flex items-start gap-2 text-right">
           <span className="flex flex-col gap-1">
             <span className="text-sm text-neutral-600 dark:text-neutral-400">Next</span>
-            <span className="text-sm font-medium">{next.title}</span>
+            <span className="text-sm font-medium">{next.article.title}</span>
           </span>
           <Icon name="ChevronRight" className={cn(CHEVRON, "-mr-6")} />
         </Link>

@@ -2,12 +2,12 @@ import { Basic } from "@/content/ui/components/textarea/basic";
 import { Sizes } from "@/content/ui/components/textarea/sizes";
 import { Disabled } from "@/content/ui/components/textarea/disabled";
 import { Invalid } from "@/content/ui/components/textarea/invalid";
-import { Demo } from "@/components/demo";
-import { PropsTable } from "@/components/props-table";
+import { Demo } from "@/components/book/demo";
+import { PropsTable } from "@/components/book/props-table";
 import { H2 } from "@arshad.fyi/ui/components/prose/heading";
 import { InlineCode } from "@arshad.fyi/ui/components/prose/inline-code";
 import { P } from "@arshad.fyi/ui/components/prose/paragraph";
-import type { Article } from "@/types/article";
+import type { Article } from "@/lib/content";
 
 export const textarea = {
   slug: "textarea",

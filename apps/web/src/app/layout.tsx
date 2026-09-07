@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import type { PropsWithChildren } from "react";
-import { Header } from "@/components/header";
-import { ScrollToHash } from "@/components/scroll-to-hash";
-import { og } from "@/config/og";
-import { site } from "@/config/site";
-import { ogImageUrl } from "@/lib/og-image-url";
+import { Header } from "@/components/site/header";
+import { ScrollToHash } from "@/components/site/scroll-to-hash";
+import { OG_SIZE, ogImageUrl } from "@/lib/metadata";
+import { site } from "@/lib/site";
 import { ThemeProvider } from "@arshad.fyi/ui/components/theme-provider";
 import { fonts } from "@arshad.fyi/ui/config/fonts";
 import { themeColor } from "@arshad.fyi/ui/config/theme-color";
@@ -14,7 +13,7 @@ import "@/app/globals.css";
 
 const image = {
   url: ogImageUrl(site.name, "Design engineer · UI · writing"),
-  ...og.size,
+  ...OG_SIZE,
   alt: site.description,
 };
 

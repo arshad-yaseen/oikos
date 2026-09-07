@@ -1,5 +1,6 @@
+import type { Route } from "next";
 import Link from "next/link";
-import { HeroArt } from "@/components/hero-art";
+import { HeroArt } from "@/components/home/hero-art";
 import { Button } from "@arshad.fyi/ui/components/button";
 import { cn } from "@arshad.fyi/ui/lib/cn";
 
@@ -41,7 +42,8 @@ export function Hero() {
             "mt-4 flex flex-wrap gap-2 bg-background px-(--layout-padding) py-3",
           )}
         >
-          <Button className="rounded-full" render={<Link href="/ui" />}>
+          {/* The root of an optional catch-all, which `Route` cannot express. */}
+          <Button className="rounded-full" render={<Link href={"/ui" as Route} />}>
             Explore UI
           </Button>
           <Button variant="outline" className="rounded-full" render={<Link href="/writings" />}>

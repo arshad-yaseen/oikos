@@ -1,0 +1,25 @@
+import { shadowsOverBorders } from "@/content/ui/notes/shadows-over-borders";
+import type { Section } from "@/lib/content";
+import { byDate } from "@/lib/date";
+import { A } from "@arshad.fyi/ui/components/prose/anchor";
+import { Li, Ul } from "@arshad.fyi/ui/components/prose/list";
+
+const articles = [shadowsOverBorders].toSorted(byDate);
+
+export const notes: Section = {
+  slug: "notes",
+  title: "Notes",
+  articles,
+  page: {
+    description: "Short design and engineering notes.",
+    body: (
+      <Ul>
+        {articles.map((note) => (
+          <Li key={note.slug}>
+            <A href={`/ui/notes/${note.slug}`}>{note.title}</A>
+          </Li>
+        ))}
+      </Ul>
+    ),
+  },
+};

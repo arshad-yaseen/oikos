@@ -7,13 +7,13 @@ import { Icons } from "@/content/ui/components/select/icons";
 import { Avatars } from "@/content/ui/components/select/avatars";
 import { Disabled } from "@/content/ui/components/select/disabled";
 import { Invalid } from "@/content/ui/components/select/invalid";
-import { Demo } from "@/components/demo";
-import { PropsTable } from "@/components/props-table";
+import { Demo } from "@/components/book/demo";
+import { PropsTable } from "@/components/book/props-table";
 import { A } from "@arshad.fyi/ui/components/prose/anchor";
 import { H2, H3 } from "@arshad.fyi/ui/components/prose/heading";
 import { InlineCode } from "@arshad.fyi/ui/components/prose/inline-code";
 import { P } from "@arshad.fyi/ui/components/prose/paragraph";
-import type { Article } from "@/types/article";
+import type { Article } from "@/lib/content";
 
 export const select = {
   slug: "select",
