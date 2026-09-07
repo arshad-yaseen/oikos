@@ -1,4 +1,4 @@
-import { CacheWarm } from "@fyi/ui/components/dot-matrix/cache-warm";
+import { CacheWarm } from "@arshad.fyi/ui/components/dot-matrix/cache-warm";
 
 export function Sizes() {
   return (

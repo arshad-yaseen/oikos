@@ -1,5 +1,5 @@
 {
-  "name": "@fyi/shared",
+  "name": "@arshad.fyi/shared",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@fyi/typescript-config": "workspace:*",
+    "@arshad.fyi/typescript-config": "workspace:*",
     "typescript": "^7.0.2"
   }
 }

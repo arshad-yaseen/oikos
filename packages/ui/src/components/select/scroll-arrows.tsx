@@ -1,6 +1,6 @@
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { ChevronDownIcon, ChevronUpIcon } from "@fyi/ui/components/select/icons";
-import { cn } from "@fyi/ui/lib/cn";
+import { ChevronDownIcon, ChevronUpIcon } from "@arshad.fyi/ui/components/select/icons";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 const SCROLL_ARROW = cn(
   "z-1 flex h-7 w-full cursor-default items-center justify-center",

@@ -1,4 +1,4 @@
-import { Avatar } from "@fyi/ui/components/avatar";
+import { Avatar } from "@arshad.fyi/ui/components/avatar";
 
 export function Basic() {
   return (

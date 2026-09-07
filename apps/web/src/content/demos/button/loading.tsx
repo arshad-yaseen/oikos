@@ -1,5 +1,5 @@
-import { Button } from "@fyi/ui/components/button";
-import { Diffusion } from "@fyi/ui/components/dot-matrix/diffusion";
+import { Button } from "@arshad.fyi/ui/components/button";
+import { Diffusion } from "@arshad.fyi/ui/components/dot-matrix/diffusion";
 
 export function Loading() {
   return (

@@ -1,8 +1,8 @@
 import { notes } from "@/content/config/notes";
 import { Article } from "@/features/docs/components/article";
 import { notesIndex } from "@/features/docs/config/notes-index";
-import { A } from "@fyi/ui/components/prose/anchor";
-import { Li, Ul } from "@fyi/ui/components/prose/list";
+import { A } from "@arshad.fyi/ui/components/prose/anchor";
+import { Li, Ul } from "@arshad.fyi/ui/components/prose/list";
 
 export function NotesIndex() {
   const doc = { slug: "notes", title: notesIndex.title, description: notesIndex.description };

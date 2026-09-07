@@ -1,7 +1,7 @@
 import type { Route } from "next";
 import Link from "next/link";
 import type { PropsWithChildren } from "react";
-import { cn } from "@fyi/ui/lib/cn";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 type AProps<T extends string> = PropsWithChildren<{
   href: Route<T>;

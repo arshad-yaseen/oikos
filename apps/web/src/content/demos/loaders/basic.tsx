@@ -1,7 +1,7 @@
-import { Bloom } from "@fyi/ui/components/dot-matrix/bloom";
-import { Helix } from "@fyi/ui/components/dot-matrix/helix";
-import { Orbit } from "@fyi/ui/components/dot-matrix/orbit";
-import { Ripple } from "@fyi/ui/components/dot-matrix/ripple";
+import { Bloom } from "@arshad.fyi/ui/components/dot-matrix/bloom";
+import { Helix } from "@arshad.fyi/ui/components/dot-matrix/helix";
+import { Orbit } from "@arshad.fyi/ui/components/dot-matrix/orbit";
+import { Ripple } from "@arshad.fyi/ui/components/dot-matrix/ripple";
 
 export function Basic() {
   return (

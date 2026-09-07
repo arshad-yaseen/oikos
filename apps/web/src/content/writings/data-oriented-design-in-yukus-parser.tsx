@@ -1,11 +1,11 @@
-import { CodeBlock } from "@fyi/ui/components/code-block";
-import { A } from "@fyi/ui/components/prose/anchor";
-import { H2, H3 } from "@fyi/ui/components/prose/heading";
-import { InlineCode } from "@fyi/ui/components/prose/inline-code";
-import { Li, Ul } from "@fyi/ui/components/prose/list";
-import { P } from "@fyi/ui/components/prose/paragraph";
-import { Strong } from "@fyi/ui/components/prose/strong";
-import { Table } from "@fyi/ui/components/prose/table";
+import { CodeBlock } from "@arshad.fyi/ui/components/code-block";
+import { A } from "@arshad.fyi/ui/components/prose/anchor";
+import { H2, H3 } from "@arshad.fyi/ui/components/prose/heading";
+import { InlineCode } from "@arshad.fyi/ui/components/prose/inline-code";
+import { Li, Ul } from "@arshad.fyi/ui/components/prose/list";
+import { P } from "@arshad.fyi/ui/components/prose/paragraph";
+import { Strong } from "@arshad.fyi/ui/components/prose/strong";
+import { Table } from "@arshad.fyi/ui/components/prose/table";
 import type { Writing } from "@/content/types/writing";
 
 export const dataOrientedDesignInYukusParser = {

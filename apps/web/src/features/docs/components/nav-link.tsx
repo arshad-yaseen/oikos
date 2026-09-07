@@ -4,8 +4,8 @@ import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { PropsWithChildren } from "react";
-import { Button } from "@fyi/ui/components/button";
-import { cn } from "@fyi/ui/lib/cn";
+import { Button } from "@arshad.fyi/ui/components/button";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 type NavLinkProps<T extends string> = PropsWithChildren<{
   href: Route<T>;

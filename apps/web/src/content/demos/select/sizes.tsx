@@ -1,4 +1,4 @@
-import { Select } from "@fyi/ui/components/select";
+import { Select } from "@arshad.fyi/ui/components/select";
 
 const themes = [
   { label: "System", value: "system" },

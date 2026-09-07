@@ -1,4 +1,4 @@
-import { Button } from "@fyi/ui/components/button";
+import { Button } from "@arshad.fyi/ui/components/button";
 
 export function Basic() {
   return (

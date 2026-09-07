@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { HeroArt } from "@/features/home/components/hero-art";
-import { Button } from "@fyi/ui/components/button";
-import { cn } from "@fyi/ui/lib/cn";
+import { Button } from "@arshad.fyi/ui/components/button";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 // A hairline that bleeds past the centered layout box out to the screen edges.
 const BLEED_RULE = cn(

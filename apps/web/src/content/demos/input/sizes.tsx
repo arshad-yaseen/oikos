@@ -1,4 +1,4 @@
-import { Input } from "@fyi/ui/components/input";
+import { Input } from "@arshad.fyi/ui/components/input";
 
 const sizes = ["sm", "md", "lg"] as const;
 

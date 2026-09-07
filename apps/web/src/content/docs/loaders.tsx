@@ -4,9 +4,9 @@ import { Color } from "@/content/demos/loaders/color";
 import { Sizes } from "@/content/demos/loaders/sizes";
 import { Demo } from "@/content/components/demo";
 import { PropsTable } from "@/content/components/props-table";
-import { H2 } from "@fyi/ui/components/prose/heading";
-import { InlineCode } from "@fyi/ui/components/prose/inline-code";
-import { P } from "@fyi/ui/components/prose/paragraph";
+import { H2 } from "@arshad.fyi/ui/components/prose/heading";
+import { InlineCode } from "@arshad.fyi/ui/components/prose/inline-code";
+import { P } from "@arshad.fyi/ui/components/prose/paragraph";
 import type { Doc } from "@/content/types/doc";
 
 export const loaders = {

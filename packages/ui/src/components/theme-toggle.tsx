@@ -1,8 +1,8 @@
 "use client";
 
-import { useTheme } from "@fyi/ui/hooks/use-theme";
-import { Button } from "@fyi/ui/components/button";
-import { Icon } from "@fyi/ui/components/icon";
+import { useTheme } from "@arshad.fyi/ui/hooks/use-theme";
+import { Button } from "@arshad.fyi/ui/components/button";
+import { Icon } from "@arshad.fyi/ui/components/icon";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();

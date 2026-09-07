@@ -1,6 +1,6 @@
 import { Avatar as AvatarPrimitive } from "@base-ui/react/avatar";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@fyi/ui/lib/cn";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 const avatarVariants = cva(
   [

@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react";
-import { cn } from "@fyi/ui/lib/cn";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 const MARKER = cn(
   "pl-5 text-base/8 text-pretty text-foreground/80",

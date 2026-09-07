@@ -2,11 +2,11 @@ import type { Metadata, Viewport } from "next";
 import type { PropsWithChildren } from "react";
 import { Header } from "@/shared/components/header";
 import { ScrollToHash } from "@/shared/components/scroll-to-hash";
-import { ThemeProvider } from "@fyi/ui/components/theme-provider";
-import { fonts } from "@fyi/ui/config/fonts";
-import { themeColor } from "@fyi/ui/config/theme-color";
+import { ThemeProvider } from "@arshad.fyi/ui/components/theme-provider";
+import { fonts } from "@arshad.fyi/ui/config/fonts";
+import { themeColor } from "@arshad.fyi/ui/config/theme-color";
 import { site } from "@/shared/config/site";
-import { cn } from "@fyi/ui/lib/cn";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 import "@/styles/globals.css";
 

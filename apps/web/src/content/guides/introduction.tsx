@@ -1,5 +1,5 @@
-import { A } from "@fyi/ui/components/prose/anchor";
-import { P } from "@fyi/ui/components/prose/paragraph";
+import { A } from "@arshad.fyi/ui/components/prose/anchor";
+import { P } from "@arshad.fyi/ui/components/prose/paragraph";
 import type { Doc } from "@/content/types/doc";
 
 export const introduction = {

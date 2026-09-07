@@ -1,8 +1,8 @@
 import { Preview } from "@/content/components/preview";
-import { Callout } from "@fyi/ui/components/prose/callout";
-import { InlineCode } from "@fyi/ui/components/prose/inline-code";
-import { P } from "@fyi/ui/components/prose/paragraph";
-import { cn } from "@fyi/ui/lib/cn";
+import { Callout } from "@arshad.fyi/ui/components/prose/callout";
+import { InlineCode } from "@arshad.fyi/ui/components/prose/inline-code";
+import { P } from "@arshad.fyi/ui/components/prose/paragraph";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 import type { Note } from "@/content/types/note";
 
 type SquareProps = {

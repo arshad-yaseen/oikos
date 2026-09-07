@@ -1,6 +1,6 @@
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { CheckIcon } from "@fyi/ui/components/select/icons";
-import { cn } from "@fyi/ui/lib/cn";
+import { CheckIcon } from "@arshad.fyi/ui/components/select/icons";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 export type SelectItemIndicatorProps = SelectPrimitive.ItemIndicator.Props;
 

@@ -1,4 +1,4 @@
-import { Ripple } from "@fyi/ui/components/dot-matrix/ripple";
+import { Ripple } from "@arshad.fyi/ui/components/dot-matrix/ripple";
 
 export function Color() {
   return (

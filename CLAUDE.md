@@ -1,4 +1,4 @@
-# fyi
+# arshad.fyi
 
 A design system and the site that documents it, in one workspace. Every task runs through the root scripts.
 

@@ -1,7 +1,7 @@
 import type { WritingEntry } from "@/content/types/writing";
 import type { PropsWithChildren } from "react";
-import { formatDate } from "@fyi/shared/lib/format-date";
-import { cn } from "@fyi/ui/lib/cn";
+import { formatDate } from "@arshad.fyi/shared/lib/format-date";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 type WritingArticleProps = PropsWithChildren<{
   writing: WritingEntry;

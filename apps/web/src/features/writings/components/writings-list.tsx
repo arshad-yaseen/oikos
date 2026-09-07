@@ -1,8 +1,8 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { writings } from "@/content/config/writings";
-import { formatDate } from "@fyi/shared/lib/format-date";
-import { cn } from "@fyi/ui/lib/cn";
+import { formatDate } from "@arshad.fyi/shared/lib/format-date";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 export function WritingsList() {
   return (

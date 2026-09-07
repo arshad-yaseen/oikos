@@ -1,5 +1,5 @@
 import { Nav } from "@/features/docs/components/nav";
-import { cn } from "@fyi/ui/lib/cn";
+import { cn } from "@arshad.fyi/ui/lib/cn";
 
 export function Sidebar() {
   return (

@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "fyi",
+      "name": "arshad.fyi",
       "devDependencies": {
         "oxfmt": "^0.66.0",
         "oxlint": "^1.81.0",
@@ -14,14 +14,14 @@
       "name": "web",
       "version": "0.1.0",
       "dependencies": {
-        "@fyi/shared": "workspace:*",
-        "@fyi/ui": "workspace:*",
+        "@arshad.fyi/shared": "workspace:*",
+        "@arshad.fyi/ui": "workspace:*",
         "next": "16.3.4",
         "react": "19.2.8",
         "react-dom": "19.2.8",
       },
       "devDependencies": {
-        "@fyi/typescript-config": "workspace:*",
+        "@arshad.fyi/typescript-config": "workspace:*",
         "@tailwindcss/postcss": "^4.3.3",
         "@types/node": "^26.4.1",
         "@types/react": "^19.2.18",
@@ -30,30 +30,30 @@
       },
     },
     "packages/shared": {
-      "name": "@fyi/shared",
+      "name": "@arshad.fyi/shared",
       "version": "0.0.0",
       "devDependencies": {
-        "@fyi/typescript-config": "workspace:*",
+        "@arshad.fyi/typescript-config": "workspace:*",
         "typescript": "^7.0.2",
       },
     },
     "packages/typescript-config": {
-      "name": "@fyi/typescript-config",
+      "name": "@arshad.fyi/typescript-config",
       "version": "0.0.0",
     },
     "packages/ui": {
-      "name": "@fyi/ui",
+      "name": "@arshad.fyi/ui",
       "version": "0.0.0",
       "dependencies": {
         "@base-ui/react": "^1.8.0",
-        "@fyi/shared": "workspace:*",
+        "@arshad.fyi/shared": "workspace:*",
         "class-variance-authority": "^0.7.1",
         "cn": "^0.2.5",
         "next-themes": "^0.4.6",
         "tailwindcss": "^4.3.3",
       },
       "devDependencies": {
-        "@fyi/typescript-config": "workspace:*",
+        "@arshad.fyi/typescript-config": "workspace:*",
         "@types/node": "^26.4.1",
         "@types/react": "^19.2.18",
         "@types/react-dom": "^19.2.7",
@@ -88,11 +88,11 @@
 
     "@floating-ui/utils": ["@floating-ui/utils@0.2.12", "", {}, "sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww=="],
 
-    "@fyi/shared": ["@fyi/shared@workspace:packages/shared"],
+    "@arshad.fyi/shared": ["@arshad.fyi/shared@workspace:packages/shared"],
 
-    "@fyi/typescript-config": ["@fyi/typescript-config@workspace:packages/typescript-config"],
+    "@arshad.fyi/typescript-config": ["@arshad.fyi/typescript-config@workspace:packages/typescript-config"],
 
-    "@fyi/ui": ["@fyi/ui@workspace:packages/ui"],
+    "@arshad.fyi/ui": ["@arshad.fyi/ui@workspace:packages/ui"],
 
     "@img/colour": ["@img/colour@1.1.0", "", {}, "sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ=="],
 

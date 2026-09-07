@@ -1,5 +1,5 @@
-import { Button } from "@fyi/ui/components/button";
-import { Icon } from "@fyi/ui/components/icon";
+import { Button } from "@arshad.fyi/ui/components/button";
+import { Icon } from "@arshad.fyi/ui/components/icon";
 
 export function Icons() {
   return (

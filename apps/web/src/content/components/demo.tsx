@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { PropsWithChildren } from "react";
 import { Preview } from "@/content/components/preview";
-import { CodeBlock } from "@fyi/ui/components/code-block";
+import { CodeBlock } from "@arshad.fyi/ui/components/code-block";
 
 const DEMOS_DIR = join(process.cwd(), "src/content/demos");
 

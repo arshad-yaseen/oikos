@@ -10,14 +10,14 @@
     "generate": "bun scripts/generate-registries.ts && oxfmt src/content/config"
   },
   "dependencies": {
-    "@fyi/shared": "workspace:*",
-    "@fyi/ui": "workspace:*",
+    "@arshad.fyi/shared": "workspace:*",
+    "@arshad.fyi/ui": "workspace:*",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
-    "@fyi/typescript-config": "workspace:*",
+    "@arshad.fyi/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^26.4.1",
     "@types/react": "^19.2.18",

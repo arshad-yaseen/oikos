@@ -1,8 +1,8 @@
 import { getSourceUrl } from "@/content/lib/get-source-url";
 import type { DocEntry } from "@/content/types/doc";
 import type { PropsWithChildren } from "react";
-import { Button } from "@fyi/ui/components/button";
-import { P } from "@fyi/ui/components/prose/paragraph";
+import { Button } from "@arshad.fyi/ui/components/button";
+import { P } from "@arshad.fyi/ui/components/prose/paragraph";
 
 type ArticleProps = PropsWithChildren<{
   doc: DocEntry;
