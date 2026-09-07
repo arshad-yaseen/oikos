@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { writingBodies } from "@/content/config/writing-bodies";
-import { writings } from "@/content/config/writings";
-import { getWriting } from "@/content/lib/get-writing";
-import { WritingArticle } from "@/features/writings/components/writing-article";
-import { articleJsonLd } from "@/features/writings/lib/article-json-ld";
-import { JsonLd } from "@/shared/components/json-ld";
-import { createMetadata } from "@/shared/lib/create-metadata";
+import { JsonLd } from "@/components/json-ld";
+import { WritingArticle } from "@/components/writing-article";
+import { writings } from "@/content/writings";
+import { articleJsonLd } from "@/lib/article-json-ld";
+import { createMetadata } from "@/lib/create-metadata";
 
 type WritingPageProps = {
   params: Promise<{ slug: string }>;
@@ -20,7 +18,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: WritingPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const writing = getWriting(slug);
+  const writing = writings.find((entry) => entry.slug === slug);
 
   if (!writing) {
     return {};
@@ -37,17 +35,16 @@ export async function generateMetadata({ params }: WritingPageProps): Promise<Me
 
 export default async function WritingPage({ params }: WritingPageProps) {
   const { slug } = await params;
-  const writing = getWriting(slug);
-  const loadBody = writingBodies[slug];
+  const writing = writings.find((entry) => entry.slug === slug);
 
-  if (!writing || !loadBody) {
+  if (!writing) {
     notFound();
   }
 
   return (
     <>
       <JsonLd schema={articleJsonLd(writing)} />
-      <WritingArticle writing={writing}>{await loadBody()}</WritingArticle>
+      <WritingArticle writing={writing}>{writing.body}</WritingArticle>
     </>
   );
 }

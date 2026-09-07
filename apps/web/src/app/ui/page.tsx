@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import { introduction } from "@/content/guides/introduction";
-import { Article } from "@/features/docs/components/article";
-import { createMetadata } from "@/shared/lib/create-metadata";
+import { ArticleHeader } from "@/components/article-header";
+import { ui } from "@/content/ui";
+import { createMetadata } from "@/lib/create-metadata";
 
 export const metadata: Metadata = createMetadata({
-  title: introduction.title,
-  description: introduction.description,
+  title: ui.introduction.title,
+  description: ui.introduction.description,
   path: "/ui",
 });
 
-export default function UIPage() {
-  return <Article doc={introduction}>{introduction.body}</Article>;
+export default function UiPage() {
+  return (
+    <>
+      <ArticleHeader article={ui.introduction} />
+      {ui.introduction.body}
+    </>
+  );
 }

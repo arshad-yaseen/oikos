@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { WritingsList } from "@/features/writings/components/writings-list";
-import { createMetadata } from "@/shared/lib/create-metadata";
+import { WritingsList } from "@/components/writings-list";
+import { writings } from "@/content/writings";
+import { createMetadata } from "@/lib/create-metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Writings",
@@ -8,5 +9,5 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function WritingsPage() {
-  return <WritingsList />;
+  return <WritingsList writings={writings} />;
 }

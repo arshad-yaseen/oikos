@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "react";
 import { cn } from "@arshad.fyi/ui/lib/cn";
-import { slugify } from "@arshad.fyi/shared/lib/slugify";
+import { slugify } from "@arshad.fyi/ui/lib/slugify";
 
 type HeadingProps = PropsWithChildren<{
   as: "h2" | "h3";

@@ -6,7 +6,7 @@ import { Li, Ul } from "@arshad.fyi/ui/components/prose/list";
 import { P } from "@arshad.fyi/ui/components/prose/paragraph";
 import { Strong } from "@arshad.fyi/ui/components/prose/strong";
 import { Table } from "@arshad.fyi/ui/components/prose/table";
-import type { Writing } from "@/content/types/writing";
+import type { DatedArticle } from "@/types/article";
 
 export const dataOrientedDesignInYukusParser = {
   slug: "data-oriented-design-in-yukus-parser",
@@ -771,4 +771,4 @@ function _decode(i) {
       </P>
     </>
   ),
-} satisfies Writing;
+} satisfies DatedArticle;

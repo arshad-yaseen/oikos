@@ -1,14 +1,27 @@
 import type { Metadata } from "next";
-import { NotesIndex } from "@/features/docs/components/notes-index";
-import { notesIndex } from "@/features/docs/config/notes-index";
-import { createMetadata } from "@/shared/lib/create-metadata";
+import { ArticleHeader } from "@/components/article-header";
+import { ui } from "@/content/ui";
+import { createMetadata } from "@/lib/create-metadata";
+import { A } from "@arshad.fyi/ui/components/prose/anchor";
+import { Li, Ul } from "@arshad.fyi/ui/components/prose/list";
 
 export const metadata: Metadata = createMetadata({
-  title: notesIndex.title,
-  description: notesIndex.description,
+  title: ui.notesIndex.title,
+  description: ui.notesIndex.description,
   path: "/ui/notes",
 });
 
 export default function NotesPage() {
-  return <NotesIndex />;
+  return (
+    <>
+      <ArticleHeader article={ui.notesIndex} />
+      <Ul>
+        {ui.notes.map((note) => (
+          <Li key={note.slug}>
+            <A href={`/ui/notes/${note.slug}`}>{note.title}</A>
+          </Li>
+        ))}
+      </Ul>
+    </>
+  );
 }

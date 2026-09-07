@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { noteBodies } from "@/content/config/note-bodies";
-import { notes } from "@/content/config/notes";
-import { getNote } from "@/content/lib/get-note";
-import { Article } from "@/features/docs/components/article";
-import { createMetadata } from "@/shared/lib/create-metadata";
+import { ArticleHeader } from "@/components/article-header";
+import { ui } from "@/content/ui";
+import { createMetadata } from "@/lib/create-metadata";
 
 type NotePageProps = {
   params: Promise<{ slug: string }>;
@@ -13,12 +11,12 @@ type NotePageProps = {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return notes.map((note) => ({ slug: note.slug }));
+  return ui.notes.map((note) => ({ slug: note.slug }));
 }
 
 export async function generateMetadata({ params }: NotePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const note = getNote(slug);
+  const note = ui.notes.find((entry) => entry.slug === slug);
 
   if (!note) {
     return {};
@@ -35,12 +33,16 @@ export async function generateMetadata({ params }: NotePageProps): Promise<Metad
 
 export default async function NotePage({ params }: NotePageProps) {
   const { slug } = await params;
-  const note = getNote(slug);
-  const loadBody = noteBodies[slug];
+  const note = ui.notes.find((entry) => entry.slug === slug);
 
-  if (!note || !loadBody) {
+  if (!note) {
     notFound();
   }
 
-  return <Article doc={note}>{await loadBody()}</Article>;
+  return (
+    <>
+      <ArticleHeader article={note} />
+      {note.body}
+    </>
+  );
 }

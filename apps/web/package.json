@@ -6,11 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "next typegen && tsc --noEmit",
-    "generate": "bun scripts/generate-registries.ts && oxfmt src/content/config"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@arshad.fyi/shared": "workspace:*",
     "@arshad.fyi/ui": "workspace:*",
     "next": "16.3.4",
     "react": "19.2.8",

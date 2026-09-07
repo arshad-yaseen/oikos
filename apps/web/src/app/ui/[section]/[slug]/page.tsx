@@ -1,46 +1,55 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { docBodies } from "@/content/config/doc-bodies";
-import { sections } from "@/content/config/sections";
-import { getDoc } from "@/content/lib/get-doc";
-import { Article } from "@/features/docs/components/article";
-import { createMetadata } from "@/shared/lib/create-metadata";
+import { ArticleHeader } from "@/components/article-header";
+import { ui } from "@/content/ui";
+import { createMetadata } from "@/lib/create-metadata";
+import type { Article } from "@/types/article";
 
-type DocPageProps = {
+type ArticlePageProps = {
   params: Promise<{ section: string; slug: string }>;
 };
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return sections.flatMap((section) =>
-    section.docs.map((slug) => ({ section: section.slug, slug })),
+  return ui.sections.flatMap((section) =>
+    section.articles.map((article) => ({ section: section.slug, slug: article.slug })),
   );
 }
 
-export async function generateMetadata({ params }: DocPageProps): Promise<Metadata> {
-  const { section, slug } = await params;
-  const doc = getDoc(section, slug);
+function findArticle(section: string, slug: string): Article | undefined {
+  return ui.sections
+    .find((entry) => entry.slug === section)
+    ?.articles.find((article) => article.slug === slug);
+}
 
-  if (!doc) {
+export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
+  const { section, slug } = await params;
+  const article = findArticle(section, slug);
+
+  if (!article) {
     return {};
   }
 
   return createMetadata({
-    title: doc.title,
-    description: doc.description,
-    path: `/ui/${section}/${doc.slug}`,
+    title: article.title,
+    description: article.description,
+    path: `/ui/${section}/${article.slug}`,
   });
 }
 
-export default async function DocPage({ params }: DocPageProps) {
+export default async function ArticlePage({ params }: ArticlePageProps) {
   const { section, slug } = await params;
-  const doc = getDoc(section, slug);
-  const loadBody = docBodies[slug];
+  const article = findArticle(section, slug);
 
-  if (!doc || !loadBody) {
+  if (!article) {
     notFound();
   }
 
-  return <Article doc={doc}>{await loadBody()}</Article>;
+  return (
+    <>
+      <ArticleHeader article={article} />
+      {article.body}
+    </>
+  );
 }

@@ -1,6 +1,5 @@
 import { notFound, redirect } from "next/navigation";
-import { sections } from "@/content/config/sections";
-import { getSectionDocs } from "@/content/lib/get-section-docs";
+import { ui } from "@/content/ui";
 
 type SectionPageProps = {
   params: Promise<{ section: string }>;
@@ -9,12 +8,12 @@ type SectionPageProps = {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return sections.map((section) => ({ section: section.slug }));
+  return ui.sections.map((section) => ({ section: section.slug }));
 }
 
 export default async function SectionPage({ params }: SectionPageProps) {
   const { section } = await params;
-  const [first] = getSectionDocs(section);
+  const first = ui.sections.find((entry) => entry.slug === section)?.articles[0];
 
   if (!first) {
     notFound();

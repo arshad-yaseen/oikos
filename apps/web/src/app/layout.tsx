@@ -1,14 +1,22 @@
 import type { Metadata, Viewport } from "next";
 import type { PropsWithChildren } from "react";
-import { Header } from "@/shared/components/header";
-import { ScrollToHash } from "@/shared/components/scroll-to-hash";
+import { Header } from "@/components/header";
+import { ScrollToHash } from "@/components/scroll-to-hash";
+import { og } from "@/config/og";
+import { site } from "@/config/site";
+import { ogImageUrl } from "@/lib/og-image-url";
 import { ThemeProvider } from "@arshad.fyi/ui/components/theme-provider";
 import { fonts } from "@arshad.fyi/ui/config/fonts";
 import { themeColor } from "@arshad.fyi/ui/config/theme-color";
-import { site } from "@/shared/config/site";
 import { cn } from "@arshad.fyi/ui/lib/cn";
 
-import "@/styles/globals.css";
+import "@/app/globals.css";
+
+const image = {
+  url: ogImageUrl(site.name, "Design engineer · UI · writing"),
+  ...og.size,
+  alt: site.description,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -29,6 +37,7 @@ export const metadata: Metadata = {
     description: site.description,
     url: site.url,
     locale: "en_US",
+    images: [image],
   },
   twitter: {
     card: "summary_large_image",
@@ -36,6 +45,7 @@ export const metadata: Metadata = {
     description: site.description,
     creator: site.twitter,
     site: site.twitter,
+    images: [image],
   },
 };
 
