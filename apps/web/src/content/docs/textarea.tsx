@@ -13,7 +13,7 @@ export const textarea = {
   slug: "textarea",
   title: "Textarea",
   description: "A multi-line text field.",
-  source: "src/ui/components/textarea.tsx",
+  source: "packages/ui/src/components/textarea.tsx",
   body: (
     <>
       <Demo name="textarea/basic">

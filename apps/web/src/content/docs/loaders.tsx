@@ -13,7 +13,7 @@ export const loaders = {
   slug: "loaders",
   title: "Loaders",
   description: "A set of 5×5 dot matrix loaders, each a self-contained SVG.",
-  source: "src/ui/components/dot-matrix",
+  source: "packages/ui/src/components/dot-matrix",
   body: (
     <>
       <Demo name="loaders/basic">

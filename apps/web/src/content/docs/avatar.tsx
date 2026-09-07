@@ -14,7 +14,7 @@ export const avatar = {
   slug: "avatar",
   title: "Avatar",
   description: "A user’s image, with initials as a fallback.",
-  source: "src/ui/components/avatar.tsx",
+  source: "packages/ui/src/components/avatar.tsx",
   body: (
     <>
       <Demo name="avatar/basic">

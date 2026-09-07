@@ -17,7 +17,7 @@ export const button = {
   slug: "button",
   title: "Button",
   description: "Triggers an action.",
-  source: "src/ui/components/button.tsx",
+  source: "packages/ui/src/components/button.tsx",
   body: (
     <>
       <Demo name="button/basic">
