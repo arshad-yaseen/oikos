@@ -4,13 +4,6 @@ import { HeroArt } from "@/components/home/hero-art";
 import { Button } from "@arshad.fyi/ui/components/button";
 import { cn } from "@arshad.fyi/ui/lib/cn";
 
-// A hairline that bleeds past the centered layout box out to the screen edges.
-const BLEED_RULE = cn(
-  "relative",
-  "before:pointer-events-none before:absolute before:top-0 before:left-1/2 before:w-screen before:-translate-x-1/2 before:border-t-hairline before:border-current/10 before:content-['']",
-  "after:pointer-events-none after:absolute after:bottom-0 after:left-1/2 after:w-screen after:-translate-x-1/2 after:border-b-hairline after:border-current/10 after:content-['']",
-);
-
 export function Hero() {
   return (
     <section
@@ -38,11 +31,14 @@ export function Hero() {
 
         <div
           className={cn(
-            BLEED_RULE,
+            cn(
+              "relative",
+              "before:pointer-events-none before:absolute before:top-0 before:left-1/2 before:w-screen before:-translate-x-1/2 before:border-t-hairline before:border-current/10 before:content-['']",
+              "after:pointer-events-none after:absolute after:bottom-0 after:left-1/2 after:w-screen after:-translate-x-1/2 after:border-b-hairline after:border-current/10 after:content-['']",
+            ),
             "mt-4 flex flex-wrap gap-2 bg-background px-(--layout-padding) py-3",
           )}
         >
-          {/* The root of an optional catch-all, which `Route` cannot express. */}
           <Button className="rounded-full" render={<Link href={"/ui" as Route} />}>
             Explore UI
           </Button>
