@@ -11,11 +11,11 @@ type CodeBlockProps = {
 const UNLOCK_DELAY = 150;
 
 const SYNTAX = cn(
-  "[&_.code-keyword]:text-neutral-700 dark:[&_.code-keyword]:text-neutral-300",
-  "[&_.code-string]:text-neutral-700 dark:[&_.code-string]:text-neutral-300",
-  "[&_.code-number]:text-neutral-700 dark:[&_.code-number]:text-neutral-300",
+  "[&_.code-keyword]:text-neutral-800 dark:[&_.code-keyword]:text-neutral-300",
+  "[&_.code-string]:text-green-800 dark:[&_.code-string]:text-green-300",
+  "[&_.code-class]:text-emerald-800 dark:[&_.code-class]:text-amber-300",
+  "[&_.code-sign]:text-mauve-700 dark:[&_.code-sign]:text-mauve-300",
   "[&_.code-comment]:text-neutral-600 dark:[&_.code-comment]:text-neutral-400",
-  "[&_.code-sign]:text-neutral-600 dark:[&_.code-sign]:text-neutral-400",
 );
 
 /** Drops pointer events while the page scrolls, so a trackpad gesture is never trapped inside. */
