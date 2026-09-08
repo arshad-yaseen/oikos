@@ -1,8 +1,8 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { HeroArt } from "@/components/home/hero-art";
-import { Button } from "@arshad.fyi/ui/components/button";
-import { cn } from "@arshad.fyi/ui/lib/cn";
+import { Button } from "@basis/ui/components/button";
+import { cn } from "@basis/ui/lib/cn";
 
 export function Hero() {
   return (

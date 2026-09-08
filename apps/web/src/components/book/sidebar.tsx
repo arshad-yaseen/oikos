@@ -1,7 +1,7 @@
 import type { Route } from "next";
 import { NavLink } from "@/components/book/nav-link";
 import type { NavGroup } from "@/lib/content";
-import { cn } from "@arshad.fyi/ui/lib/cn";
+import { cn } from "@basis/ui/lib/cn";
 
 type SidebarProps = {
   nav: NavGroup[];

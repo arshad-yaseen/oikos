@@ -2,7 +2,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import { formatDate } from "@/lib/date";
 import type { DatedArticle } from "@/lib/content";
-import { cn } from "@arshad.fyi/ui/lib/cn";
+import { cn } from "@basis/ui/lib/cn";
 
 type WritingsListProps = {
   writings: DatedArticle[];

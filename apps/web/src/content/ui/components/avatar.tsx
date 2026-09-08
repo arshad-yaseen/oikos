@@ -4,10 +4,10 @@ import { Fallback } from "@/content/ui/components/avatar/fallback";
 import { Group } from "@/content/ui/components/avatar/group";
 import { Demo } from "@/components/book/demo";
 import { PropsTable } from "@/components/book/props-table";
-import { A } from "@arshad.fyi/ui/components/prose/anchor";
-import { H2 } from "@arshad.fyi/ui/components/prose/heading";
-import { InlineCode } from "@arshad.fyi/ui/components/prose/inline-code";
-import { P } from "@arshad.fyi/ui/components/prose/paragraph";
+import { A } from "@basis/ui/components/prose/anchor";
+import { H2 } from "@basis/ui/components/prose/heading";
+import { InlineCode } from "@basis/ui/components/prose/inline-code";
+import { P } from "@basis/ui/components/prose/paragraph";
 import type { Article } from "@/lib/content";
 
 export const avatar = {

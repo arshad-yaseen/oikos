@@ -1,4 +1,4 @@
-import { Textarea } from "@arshad.fyi/ui/components/textarea";
+import { Textarea } from "@basis/ui/components/textarea";
 
 export function Invalid() {
   return <Textarea aria-label="Bio" data-invalid defaultValue="Too short" className="w-64" />;

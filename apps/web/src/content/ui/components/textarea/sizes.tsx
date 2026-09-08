@@ -1,4 +1,4 @@
-import { Textarea } from "@arshad.fyi/ui/components/textarea";
+import { Textarea } from "@basis/ui/components/textarea";
 
 const sizes = ["sm", "md", "lg"] as const;
 

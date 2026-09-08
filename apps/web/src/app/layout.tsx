@@ -4,10 +4,10 @@ import { Header } from "@/components/site/header";
 import { ScrollToHash } from "@/components/site/scroll-to-hash";
 import { OG_SIZE, ogImageUrl } from "@/lib/metadata";
 import { site } from "@/lib/site";
-import { ThemeProvider } from "@arshad.fyi/ui/components/theme-provider";
-import { fonts } from "@arshad.fyi/ui/config/fonts";
-import { themeColor } from "@arshad.fyi/ui/config/theme-color";
-import { cn } from "@arshad.fyi/ui/lib/cn";
+import { ThemeProvider } from "@basis/ui/components/theme-provider";
+import { fonts } from "@basis/ui/config/fonts";
+import { themeColor } from "@basis/ui/config/theme-color";
+import { cn } from "@basis/ui/lib/cn";
 
 import "@/app/globals.css";
 

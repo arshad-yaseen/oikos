@@ -1,5 +1,5 @@
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { cn } from "@arshad.fyi/ui/lib/cn";
+import { cn } from "@basis/ui/lib/cn";
 
 export type SelectValueProps = SelectPrimitive.Value.Props;
 

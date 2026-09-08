@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "@arshad.fyi/ui/components/button";
-import { Icon } from "@arshad.fyi/ui/components/icon";
+import { Button } from "@basis/ui/components/button";
+import { Icon } from "@basis/ui/components/icon";
 import { Route } from "next";
 
 export function AsLink() {

@@ -1,4 +1,4 @@
-import { Select } from "@arshad.fyi/ui/components/select";
+import { Select } from "@basis/ui/components/select";
 
 const plans = [
   { label: "Hobby", value: "hobby", description: "For personal projects and experiments" },

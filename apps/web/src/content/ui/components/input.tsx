@@ -4,10 +4,10 @@ import { Disabled } from "@/content/ui/components/input/disabled";
 import { Invalid } from "@/content/ui/components/input/invalid";
 import { Demo } from "@/components/book/demo";
 import { PropsTable } from "@/components/book/props-table";
-import { A } from "@arshad.fyi/ui/components/prose/anchor";
-import { H2 } from "@arshad.fyi/ui/components/prose/heading";
-import { InlineCode } from "@arshad.fyi/ui/components/prose/inline-code";
-import { P } from "@arshad.fyi/ui/components/prose/paragraph";
+import { A } from "@basis/ui/components/prose/anchor";
+import { H2 } from "@basis/ui/components/prose/heading";
+import { InlineCode } from "@basis/ui/components/prose/inline-code";
+import { P } from "@basis/ui/components/prose/paragraph";
 import type { Article } from "@/lib/content";
 
 export const input = {

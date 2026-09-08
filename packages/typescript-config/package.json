@@ -1,5 +1,5 @@
 {
-  "name": "@arshad.fyi/typescript-config",
+  "name": "@basis/typescript-config",
   "version": "0.0.0",
   "private": true,
   "exports": {

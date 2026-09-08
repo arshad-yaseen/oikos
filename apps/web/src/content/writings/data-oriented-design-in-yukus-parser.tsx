@@ -1,11 +1,11 @@
-import { CodeBlock } from "@arshad.fyi/ui/components/code-block";
-import { A } from "@arshad.fyi/ui/components/prose/anchor";
-import { H2, H3 } from "@arshad.fyi/ui/components/prose/heading";
-import { InlineCode } from "@arshad.fyi/ui/components/prose/inline-code";
-import { Li, Ul } from "@arshad.fyi/ui/components/prose/list";
-import { P } from "@arshad.fyi/ui/components/prose/paragraph";
-import { Strong } from "@arshad.fyi/ui/components/prose/strong";
-import { Table } from "@arshad.fyi/ui/components/prose/table";
+import { CodeBlock } from "@basis/ui/components/code-block";
+import { A } from "@basis/ui/components/prose/anchor";
+import { H2, H3 } from "@basis/ui/components/prose/heading";
+import { InlineCode } from "@basis/ui/components/prose/inline-code";
+import { Li, Ul } from "@basis/ui/components/prose/list";
+import { P } from "@basis/ui/components/prose/paragraph";
+import { Strong } from "@basis/ui/components/prose/strong";
+import { Table } from "@basis/ui/components/prose/table";
 import type { DatedArticle } from "@/lib/content";
 
 export const dataOrientedDesignInYukusParser = {

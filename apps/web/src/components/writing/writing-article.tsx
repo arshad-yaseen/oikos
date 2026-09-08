@@ -1,7 +1,7 @@
 import type { DatedArticle } from "@/lib/content";
 import type { PropsWithChildren } from "react";
 import { formatDate } from "@/lib/date";
-import { cn } from "@arshad.fyi/ui/lib/cn";
+import { cn } from "@basis/ui/lib/cn";
 
 type WritingArticleProps = PropsWithChildren<{
   writing: DatedArticle;

@@ -1,5 +1,5 @@
 {
-  "name": "arshad.fyi",
+  "name": "basis",
   "private": true,
   "workspaces": [
     "apps/*",

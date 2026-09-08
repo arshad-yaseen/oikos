@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   typedRoutes: true,
-  transpilePackages: ["@arshad.fyi/ui"],
+  transpilePackages: ["@basis/ui"],
   async redirects() {
     return [
       // renamed 2026-08

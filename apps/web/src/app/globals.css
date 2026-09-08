@@ -1,4 +1,4 @@
-@import "@arshad.fyi/ui/styles.css";
+@import "@basis/ui/styles.css";
 
 [id] {
   scroll-margin-top: calc(var(--header-height) + var(--spacing) * 8);
