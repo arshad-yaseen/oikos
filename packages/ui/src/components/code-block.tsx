@@ -11,9 +11,9 @@ type CodeBlockProps = {
 const UNLOCK_DELAY = 150;
 
 const SYNTAX = cn(
-  "[&_.code-keyword]:text-neutral-800 dark:[&_.code-keyword]:text-neutral-300",
-  "[&_.code-string]:text-neutral-800 dark:[&_.code-string]:text-neutral-300",
-  "[&_.code-class]:text-neutral-800 dark:[&_.code-class]:text-neutral-300",
+  "[&_.code-keyword]:text-neutral-600 dark:[&_.code-keyword]:text-neutral-300",
+  "[&_.code-string]:text-neutral-600 dark:[&_.code-string]:text-neutral-300",
+  "[&_.code-class]:text-neutral-600 dark:[&_.code-class]:text-neutral-300",
   "[&_.code-sign]:text-neutral-700 dark:[&_.code-sign]:text-neutral-300",
   "[&_.code-comment]:text-neutral-600 dark:[&_.code-comment]:text-neutral-400",
 );
@@ -55,7 +55,6 @@ export function CodeBlock({ code }: CodeBlockProps) {
         "border-hairline border-current/10",
         "text-neutral-900 dark:text-white",
         "[&_pre]:focus-visible:outline-hidden",
-        "data-[slot=code-block]:bg-neutral-100/6 dark:data-[slot=code-block]:bg-neutral-900/60",
         SYNTAX,
       )}
     >
