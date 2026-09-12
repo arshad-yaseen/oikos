@@ -3,6 +3,7 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSyncExternalStore } from "react";
 import { Logo } from "@/components/site/logo";
 import { site } from "@/lib/site";
 import { Button } from "@oikos/ui/components/button";
@@ -12,20 +13,28 @@ import { cn } from "@oikos/ui/lib/cn";
 
 /** One path segment up from the current page, so each logo click walks toward home. */
 function parentPath(pathname: string): Route {
-  // Every ancestor of a real route is itself a route, which `Route` cannot prove.
   return (pathname.slice(0, pathname.lastIndexOf("/")) || "/") as Route;
 }
 
+function subscribeToScroll(onChange: () => void): () => void {
+  window.addEventListener("scroll", onChange, { passive: true });
+  return () => window.removeEventListener("scroll", onChange);
+}
+
+const isScrolledNow = (): boolean => window.scrollY > 0;
+const isScrolledOnServer = (): boolean => false;
+
 export function Header() {
   const pathname = usePathname();
-  const isBlog = pathname.startsWith("/blog");
-  const isHome = pathname === "/";
+  const isScrolled = useSyncExternalStore(subscribeToScroll, isScrolledNow, isScrolledOnServer);
 
   return (
     <header
+      data-scrolled={isScrolled || undefined}
       className={cn(
         "sticky top-0 z-10 px-(--layout-padding)",
-        !isBlog && !isHome && "border-b-hairline border-current/10 bg-background",
+        "border-b-hairline border-transparent",
+        "data-scrolled:border-current/10 data-scrolled:bg-background",
       )}
     >
       <div className="mx-auto flex h-(--header-height) max-w-(--layout-width) items-center justify-between">
