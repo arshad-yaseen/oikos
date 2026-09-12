@@ -14,7 +14,6 @@ export const input = {
   slug: "input",
   title: "Input",
   description: "A single-line text field.",
-  source: "packages/ui/src/components/input.tsx",
   body: (
     <>
       <Demo name="ui/components/input/basic">

@@ -11,7 +11,7 @@ export const notes: Section = {
   title: "Notes",
   articles,
   page: {
-    description: "Short design and engineering notes.",
+    description: "Short notes on the decisions behind the system.",
     body: (
       <Ul>
         {articles.map((note) => (

@@ -19,7 +19,6 @@ export const select = {
   slug: "select",
   title: "Select",
   description: "Choose one or more values from a dropdown menu.",
-  source: "packages/ui/src/components/select.tsx",
   body: (
     <>
       <Demo name="ui/components/select/basic">

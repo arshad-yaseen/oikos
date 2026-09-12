@@ -5,18 +5,19 @@ import type { Article } from "@/lib/content";
 export const introduction = {
   slug: "introduction",
   title: "Introduction",
-  description: "The components that ship with Oikos, each with its variants and source.",
+  description: "The design system every Oikos page is built with.",
   body: (
     <>
       <P>
-        Every component is documented here with its variants, and every demo shows the code that
-        renders it. Copy a demo as it is, or import the component and compose your own.
+        Oikos UI is a small set of components, the tokens they share, and the notes that record why
+        they look the way they do. Every page on this site is built from it, so what is documented
+        here is what ships.
       </P>
       <P>
-        Components are built on top of <A href="https://base-ui.com">Base UI</A>, unstyled
-        accessible primitives, and styled with <A href="https://tailwindcss.com">Tailwind CSS</A>.
-        The tokens and rules behind them live in the repository, where people and agents read the
-        same documents before they build.
+        Each component page shows the component in its states and variants, with the source of every
+        example beneath it. Components are built on <A href="https://base-ui.com">Base UI</A>,
+        unstyled accessible primitives, and styled with{" "}
+        <A href="https://tailwindcss.com">Tailwind CSS</A>.
       </P>
     </>
   ),

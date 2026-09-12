@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { site } from "@/lib/site";
 
 export type Article = {
   slug: string;
@@ -8,8 +7,6 @@ export type Article = {
   body: ReactNode;
   /** Publish date, ISO 8601 (YYYY-MM-DD). Set in dated collections. */
   date?: string;
-  /** Repo-relative path to what the article documents, a file or a directory. */
-  source?: string;
 };
 
 /** An article in a chronological collection, where the date is what orders it. */
@@ -92,10 +89,4 @@ export function nav(book: Book): NavGroup[] {
     }));
 
   return [{ items: links }, ...groups];
-}
-
-/** A dot in the last segment means a file, not a directory. */
-export function sourceUrl(source: string): string {
-  const view = source.split("/").at(-1)?.includes(".") ? "blob" : "tree";
-  return `${site.repository}/${view}/main/${source}`;
 }
