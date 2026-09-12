@@ -19,19 +19,19 @@ export function websiteJsonLd(): object {
   };
 }
 
-export function articleJsonLd(writing: DatedArticle): object {
-  const url = `${site.url}/writings/${writing.slug}`;
+export function postJsonLd(post: DatedArticle): object {
+  const url = `${site.url}/blog/${post.slug}`;
 
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: writing.title,
-    description: writing.description,
-    datePublished: writing.date,
-    dateModified: writing.date,
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
     url,
     mainEntityOfPage: url,
-    image: `${site.url}${ogImageUrl(writing.title, site.name)}`,
+    image: `${site.url}${ogImageUrl(post.title, site.name)}`,
     author,
     publisher: author,
   };

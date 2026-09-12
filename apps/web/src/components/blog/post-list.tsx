@@ -4,24 +4,24 @@ import { formatDate } from "@/lib/date";
 import type { DatedArticle } from "@/lib/content";
 import { cn } from "@arshad/ui/lib/cn";
 
-type WritingsListProps = {
-  writings: DatedArticle[];
+type PostListProps = {
+  posts: DatedArticle[];
 };
 
-export function WritingsList({ writings }: WritingsListProps) {
+export function PostList({ posts }: PostListProps) {
   return (
     <ul className="flex flex-col gap-7">
-      {writings.map((writing) => (
-        <li key={writing.slug} className="flex flex-col gap-1">
+      {posts.map((post) => (
+        <li key={post.slug} className="flex flex-col gap-1">
           <time
-            dateTime={writing.date}
+            dateTime={post.date}
             className="text-sm text-neutral-500 tabular-nums dark:text-neutral-400"
           >
-            {formatDate(writing.date, { month: "short" })}
+            {formatDate(post.date, { month: "short" })}
           </time>
           {/* Every slug here comes from a content index, which `Route` cannot prove. */}
           <Link
-            href={`/writings/${writing.slug}` as Route}
+            href={`/blog/${post.slug}` as Route}
             className={cn(
               "w-fit text-2xl/snug tracking-tight text-pretty",
               "text-accent-500 dark:text-accent-400",
@@ -29,7 +29,7 @@ export function WritingsList({ writings }: WritingsListProps) {
               "transition-colors duration-150 motion-reduce:transition-none",
             )}
           >
-            {writing.title}
+            {post.title}
           </Link>
         </li>
       ))}

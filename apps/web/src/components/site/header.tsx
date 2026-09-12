@@ -4,6 +4,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/site/logo";
+import { site } from "@/lib/site";
 import { ThemeToggle } from "@arshad/ui/components/theme-toggle";
 import { cn } from "@arshad/ui/lib/cn";
 
@@ -15,14 +16,14 @@ function parentPath(pathname: string): Route {
 
 export function Header() {
   const pathname = usePathname();
-  const isWriting = pathname.startsWith("/writings");
+  const isBlog = pathname.startsWith("/blog");
   const isHome = pathname === "/";
 
   return (
     <header
       className={cn(
         "sticky top-0 z-10",
-        !isWriting && "border-b-hairline border-current/10 bg-background",
+        !isBlog && "border-b-hairline border-current/10 bg-background",
       )}
     >
       <div
@@ -33,7 +34,7 @@ export function Header() {
           isHome ? "border-current/10" : "border-transparent",
         )}
       >
-        <Link href={parentPath(pathname)} aria-label="Arshad Yaseen" className="shrink-0">
+        <Link href={parentPath(pathname)} aria-label={site.name} className="shrink-0">
           <Logo className="h-6" />
         </Link>
         <ThemeToggle />

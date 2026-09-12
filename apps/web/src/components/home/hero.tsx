@@ -19,14 +19,11 @@ export function Hero() {
       </div>
       <div className="relative z-20 flex size-full flex-col justify-center">
         <h1 className="mx-(--layout-padding) text-xl/12 font-medium tracking-tight text-balance">
-          Arshad Yaseen
+          ground
         </h1>
 
         <p className="mx-(--layout-padding) text-base/8 text-pretty text-neutral-600 dark:text-neutral-400">
-          <span className="relative inline-flex align-bottom">
-            High-performance systems, compilers, and most of computer science. Mathematics.
-            Interfaces. Less is more.
-          </span>
+          <span className="relative inline-flex align-bottom">Where every project starts.</span>
         </p>
 
         <div
@@ -42,8 +39,8 @@ export function Hero() {
           <Button className="rounded-full" render={<Link href={"/ui" as Route} />}>
             Explore UI
           </Button>
-          <Button variant="outline" className="rounded-full" render={<Link href="/writings" />}>
-            Writings
+          <Button variant="outline" className="rounded-full" render={<Link href="/blog" />}>
+            Blog
           </Button>
         </div>
       </div>

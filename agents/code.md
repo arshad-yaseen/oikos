@@ -27,7 +27,7 @@ How code is written, what it may commit its callers to, and what it may cost. `a
 ## Files
 
 - **A module is a concern, not a function.** `lib/content.ts` holds the content model and what derives from it, `lib/metadata.ts` everything about metadata, `lib/date.ts` everything about dates. A file earns its name by holding one idea whole. It never exists to hold one function.
-- **Components are one per file, grouped by the area they serve.** `components/site/` is the chrome on every page, `components/book/` what a book page is made of, `components/writing/` the writings, `components/home/` the home page. A new area is a new folder.
+- **Components are one per file, grouped by the area they serve.** `components/site/` is the chrome on every page, `components/book/` what a book page is made of, `components/blog/` the blog, `components/home/` the home page. A new area is a new folder.
 - **The kind fixes the extension.** Anything that renders is `.tsx`, everything else is `.ts`.
 - **A folder holds its file's parts and is named after it.** `select/` beside `select.tsx`. It is never a second level of categories.
 - **Types live with what they describe.** Props with the component, the content model with its functions. There is no `types/` folder.
@@ -40,7 +40,7 @@ How code is written, what it may commit its callers to, and what it may cost. `a
 - **A demo.** Write `content/ui/components/thing/variant.tsx`, and show it with `<Demo name="ui/components/thing/variant">`.
 - **A section.** Write `content/ui/thing.ts` as a `Section`, with a `thing/` folder of articles beside it, and add it to `sections` in `content/ui.ts`. Give it a `page` to list its articles, or leave it out to open on the first.
 - **A book.** Write `content/thing.ts` as a `Book`, with a `thing/` folder beside it, then `app/thing/layout.tsx` and `app/thing/[[...slug]]/page.tsx`, copied from `app/ui/`.
-- **A writing.** Write `content/writings/thing.tsx` as a `DatedArticle`, and add it to `content/writings.ts`.
+- **A post.** Write `content/blog/thing.tsx` as a `DatedArticle`, and add it to `content/blog.ts`.
 
 ## Imports
 

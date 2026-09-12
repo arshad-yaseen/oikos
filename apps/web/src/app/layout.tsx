@@ -12,7 +12,7 @@ import { cn } from "@arshad/ui/lib/cn";
 import "@/app/globals.css";
 
 const image = {
-  url: ogImageUrl(site.name, "Design engineer · UI · writing"),
+  url: ogImageUrl(site.name, "Where every project starts."),
   ...OG_SIZE,
   alt: site.description,
 };
