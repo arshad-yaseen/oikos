@@ -1,9 +1,6 @@
 import type { ReactNode } from "react";
 import { site } from "@/lib/site";
 
-// A book is what a sidebar walks: a root article, then sections of articles.
-// `pages` and `nav` derive everything a route or a sidebar needs from one.
-
 export type Article = {
   slug: string;
   title: string;
@@ -35,6 +32,8 @@ export type Section = {
 export type Book = {
   /** The path every page in the book sits under, such as `/ui`. */
   base: string;
+  /** Names the book in page titles. */
+  title: string;
   root: Article;
   sections: Section[];
 };

@@ -5,6 +5,7 @@ import type { Book } from "@/lib/content";
 
 export const ui: Book = {
   base: "/ui",
+  title: "UI",
   root: introduction,
   sections: [notes, components],
 };

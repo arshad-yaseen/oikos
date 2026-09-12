@@ -31,8 +31,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {};
   }
 
+  const title = href === ui.base ? ui.title : `${page.article.title} - ${ui.title}`;
+
   return createMetadata({
-    title: page.article.title,
+    title,
     description: page.article.description,
     path: href,
     publishedTime: page.article.date,
