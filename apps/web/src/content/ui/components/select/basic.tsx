@@ -1,4 +1,4 @@
-import { Select } from "@arshad/ui/components/select";
+import { Select } from "@oikos/ui/components/select";
 
 const fonts = [
   { label: "Inter", value: "inter" },

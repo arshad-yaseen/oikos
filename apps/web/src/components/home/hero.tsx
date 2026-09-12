@@ -1,7 +1,7 @@
 import type { Route } from "next";
 import Link from "next/link";
-import { Button } from "@arshad/ui/components/button";
-import { cn } from "@arshad/ui/lib/cn";
+import { Button } from "@oikos/ui/components/button";
+import { cn } from "@oikos/ui/lib/cn";
 
 export function Hero() {
   return (

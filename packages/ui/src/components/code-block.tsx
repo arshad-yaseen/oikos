@@ -4,7 +4,7 @@ import type { CSSProperties } from "react";
 import { useEffect, useRef } from "react";
 import { highlight } from "sugar-high";
 import type { LanguageName, TokenType } from "sugar-high";
-import { cn } from "@arshad/ui/lib/cn";
+import { cn } from "@oikos/ui/lib/cn";
 
 type CodeBlockProps = {
   code: string;

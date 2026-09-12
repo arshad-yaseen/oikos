@@ -1,4 +1,4 @@
-import { Avatar } from "@arshad/ui/components/avatar";
+import { Avatar } from "@oikos/ui/components/avatar";
 
 const sizes = ["sm", "md", "lg"] as const;
 
@@ -7,7 +7,7 @@ export function Sizes() {
     <div className="flex items-center gap-4">
       {sizes.map((size) => (
         <Avatar.Root key={size} size={size}>
-          <Avatar.Fallback>AY</Avatar.Fallback>
+          <Avatar.Fallback>NP</Avatar.Fallback>
         </Avatar.Root>
       ))}
     </div>

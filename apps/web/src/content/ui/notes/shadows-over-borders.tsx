@@ -1,8 +1,8 @@
 import { Preview } from "@/components/book/preview";
-import { Callout } from "@arshad/ui/components/prose/callout";
-import { InlineCode } from "@arshad/ui/components/prose/inline-code";
-import { P } from "@arshad/ui/components/prose/paragraph";
-import { cn } from "@arshad/ui/lib/cn";
+import { Callout } from "@oikos/ui/components/prose/callout";
+import { InlineCode } from "@oikos/ui/components/prose/inline-code";
+import { P } from "@oikos/ui/components/prose/paragraph";
+import { cn } from "@oikos/ui/lib/cn";
 import type { DatedArticle } from "@/lib/content";
 
 type SquareProps = {

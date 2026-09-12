@@ -1,5 +1,5 @@
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { cn } from "@arshad/ui/lib/cn";
+import { cn } from "@oikos/ui/lib/cn";
 
 export type SelectGroupLabelProps = SelectPrimitive.GroupLabel.Props;
 

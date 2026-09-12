@@ -1,8 +1,8 @@
 "use client";
 
-import { useTheme } from "@arshad/ui/hooks/use-theme";
-import { Button } from "@arshad/ui/components/button";
-import { Icon } from "@arshad/ui/components/icon";
+import { useTheme } from "@oikos/ui/hooks/use-theme";
+import { Button } from "@oikos/ui/components/button";
+import { Icon } from "@oikos/ui/components/icon";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();

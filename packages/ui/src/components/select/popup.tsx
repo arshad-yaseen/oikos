@@ -1,5 +1,5 @@
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { cn } from "@arshad/ui/lib/cn";
+import { cn } from "@oikos/ui/lib/cn";
 
 const POSITIONER = cn("z-50 outline-hidden select-none");
 

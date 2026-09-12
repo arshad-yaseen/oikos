@@ -1,8 +1,8 @@
 import { shadowsOverBorders } from "@/content/ui/notes/shadows-over-borders";
 import type { Section } from "@/lib/content";
 import { byDate } from "@/lib/date";
-import { A } from "@arshad/ui/components/prose/anchor";
-import { Li, Ul } from "@arshad/ui/components/prose/list";
+import { A } from "@oikos/ui/components/prose/anchor";
+import { Li, Ul } from "@oikos/ui/components/prose/list";
 
 const articles = [shadowsOverBorders].toSorted(byDate);
 

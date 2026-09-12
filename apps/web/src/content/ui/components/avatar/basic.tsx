@@ -1,4 +1,4 @@
-import { Avatar } from "@arshad/ui/components/avatar";
+import { Avatar } from "@oikos/ui/components/avatar";
 
 export function Basic() {
   return (
@@ -8,7 +8,7 @@ export function Basic() {
         <Avatar.Fallback delay={600}>LT</Avatar.Fallback>
       </Avatar.Root>
       <Avatar.Root>
-        <Avatar.Fallback>AY</Avatar.Fallback>
+        <Avatar.Fallback>NP</Avatar.Fallback>
       </Avatar.Root>
     </div>
   );

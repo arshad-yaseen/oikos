@@ -1,4 +1,4 @@
-import { Input } from "@arshad/ui/components/input";
+import { Input } from "@oikos/ui/components/input";
 
 const sizes = ["sm", "md", "lg"] as const;
 

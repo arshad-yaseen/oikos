@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react";
-import { cn } from "@arshad/ui/lib/cn";
+import { cn } from "@oikos/ui/lib/cn";
 
 export type SelectItemDescriptionProps = ComponentProps<"div">;
 

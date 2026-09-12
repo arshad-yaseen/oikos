@@ -1,5 +1,5 @@
-import { Button } from "@arshad/ui/components/button";
-import { Diffusion } from "@arshad/ui/components/dot-matrix/diffusion";
+import { Button } from "@oikos/ui/components/button";
+import { Diffusion } from "@oikos/ui/components/dot-matrix/diffusion";
 
 export function Loading() {
   return (

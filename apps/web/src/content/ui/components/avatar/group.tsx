@@ -1,4 +1,4 @@
-import { Avatar } from "@arshad/ui/components/avatar";
+import { Avatar } from "@oikos/ui/components/avatar";
 
 const people = [
   { name: "Lara Tucci", initials: "LT", src: "/avatars/lara.svg" },

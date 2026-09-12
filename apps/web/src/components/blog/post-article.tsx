@@ -1,7 +1,7 @@
 import type { DatedArticle } from "@/lib/content";
 import type { PropsWithChildren } from "react";
 import { formatDate } from "@/lib/date";
-import { cn } from "@arshad/ui/lib/cn";
+import { cn } from "@oikos/ui/lib/cn";
 
 type PostArticleProps = PropsWithChildren<{
   post: DatedArticle;

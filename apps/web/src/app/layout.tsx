@@ -4,10 +4,10 @@ import { Header } from "@/components/site/header";
 import { ScrollToHash } from "@/components/site/scroll-to-hash";
 import { OG_SIZE, ogImageUrl } from "@/lib/metadata";
 import { site } from "@/lib/site";
-import { ThemeProvider } from "@arshad/ui/components/theme-provider";
-import { fonts } from "@arshad/ui/config/fonts";
-import { themeColor } from "@arshad/ui/config/theme-color";
-import { cn } from "@arshad/ui/lib/cn";
+import { ThemeProvider } from "@oikos/ui/components/theme-provider";
+import { fonts } from "@oikos/ui/config/fonts";
+import { themeColor } from "@oikos/ui/config/theme-color";
+import { cn } from "@oikos/ui/lib/cn";
 
 import "@/app/globals.css";
 

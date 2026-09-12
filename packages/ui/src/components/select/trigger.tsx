@@ -1,6 +1,6 @@
 import { Select as SelectPrimitive } from "@base-ui/react/select";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@arshad/ui/lib/cn";
+import { cn } from "@oikos/ui/lib/cn";
 
 const triggerVariants = cva(
   [

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { OG_SIZE } from "@/lib/metadata";
 import { site } from "@/lib/site";
-import { loadOgFonts } from "@arshad/ui/lib/load-og-fonts";
+import { loadOgFonts } from "@oikos/ui/lib/load-og-fonts";
 
 const TITLE_SIZE_BY_LENGTH = [
   { upTo: 22, size: 100 },

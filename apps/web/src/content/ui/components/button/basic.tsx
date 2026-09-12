@@ -1,4 +1,4 @@
-import { Button } from "@arshad/ui/components/button";
+import { Button } from "@oikos/ui/components/button";
 
 export function Basic() {
   return (

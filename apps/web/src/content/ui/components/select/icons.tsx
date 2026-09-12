@@ -1,5 +1,5 @@
-import { Icon } from "@arshad/ui/components/icon";
-import { Select } from "@arshad/ui/components/select";
+import { Icon } from "@oikos/ui/components/icon";
+import { Select } from "@oikos/ui/components/select";
 
 const appearances = [
   {

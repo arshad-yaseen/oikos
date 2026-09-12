@@ -1,12 +1,12 @@
-import { CodeBlock } from "@arshad/ui/components/code-block";
-import { A } from "@arshad/ui/components/prose/anchor";
-import { Callout } from "@arshad/ui/components/prose/callout";
-import { H2, H3 } from "@arshad/ui/components/prose/heading";
-import { InlineCode } from "@arshad/ui/components/prose/inline-code";
-import { Li, Ul } from "@arshad/ui/components/prose/list";
-import { P } from "@arshad/ui/components/prose/paragraph";
-import { Strong } from "@arshad/ui/components/prose/strong";
-import { Table } from "@arshad/ui/components/prose/table";
+import { CodeBlock } from "@oikos/ui/components/code-block";
+import { A } from "@oikos/ui/components/prose/anchor";
+import { Callout } from "@oikos/ui/components/prose/callout";
+import { H2, H3 } from "@oikos/ui/components/prose/heading";
+import { InlineCode } from "@oikos/ui/components/prose/inline-code";
+import { Li, Ul } from "@oikos/ui/components/prose/list";
+import { P } from "@oikos/ui/components/prose/paragraph";
+import { Strong } from "@oikos/ui/components/prose/strong";
+import { Table } from "@oikos/ui/components/prose/table";
 import type { DatedArticle } from "@/lib/content";
 
 const CONSOLE = `> 0.1 + 0.2

@@ -1,4 +1,4 @@
-import { CacheWarm } from "@arshad/ui/components/dot-matrix/cache-warm";
+import { CacheWarm } from "@oikos/ui/components/dot-matrix/cache-warm";
 
 export function Sizes() {
   return (

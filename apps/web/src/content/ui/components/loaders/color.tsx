@@ -1,4 +1,4 @@
-import { Ripple } from "@arshad/ui/components/dot-matrix/ripple";
+import { Ripple } from "@oikos/ui/components/dot-matrix/ripple";
 
 export function Color() {
   return (

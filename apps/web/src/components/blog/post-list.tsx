@@ -2,7 +2,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import { formatDate } from "@/lib/date";
 import type { DatedArticle } from "@/lib/content";
-import { cn } from "@arshad/ui/lib/cn";
+import { cn } from "@oikos/ui/lib/cn";
 
 type PostListProps = {
   posts: DatedArticle[];

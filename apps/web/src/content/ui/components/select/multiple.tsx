@@ -1,6 +1,6 @@
 "use client";
 
-import { Select } from "@arshad/ui/components/select";
+import { Select } from "@oikos/ui/components/select";
 
 const languages = [
   { label: "TypeScript", value: "ts" },
