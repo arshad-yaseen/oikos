@@ -1,25 +1,34 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { useEffect, useRef } from "react";
+import { highlight } from "sugar-high";
+import type { LanguageName, TokenType } from "sugar-high";
 import { cn } from "@arshad/ui/lib/cn";
-import { highlight } from "@arshad/ui/lib/highlight";
 
 type CodeBlockProps = {
   code: string;
+  lang?: LanguageName;
 };
 
 const UNLOCK_DELAY = 150;
 
-const SYNTAX = cn(
-  "[&_.code-keyword]:text-neutral-600 dark:[&_.code-keyword]:text-neutral-300",
-  "[&_.code-string]:text-neutral-600 dark:[&_.code-string]:text-neutral-300",
-  "[&_.code-class]:text-neutral-600 dark:[&_.code-class]:text-neutral-300",
-  "[&_.code-sign]:text-neutral-700 dark:[&_.code-sign]:text-neutral-300",
-  "[&_.code-comment]:text-neutral-600 dark:[&_.code-comment]:text-neutral-400",
-);
+const DEFAULT_LANG: LanguageName = "typescript";
 
-/** Drops pointer events while the page scrolls, so a trackpad gesture is never trapped inside. */
-export function CodeBlock({ code }: CodeBlockProps) {
+// Sugar High's Vercel theme.
+const THEME = {
+  "--sh-class": "light-dark(#107d32, #00ca52)",
+  "--sh-identifier": "light-dark(#171717, #ededed)",
+  "--sh-sign": "light-dark(#171717, #ededed)",
+  "--sh-property": "light-dark(#d60020, #ff5e63)",
+  "--sh-entity": "light-dark(#107d32, #00ca52)",
+  "--sh-jsxliterals": "light-dark(#171717, #ededed)",
+  "--sh-string": "light-dark(#107d32, #00ca52)",
+  "--sh-keyword": "light-dark(#c41562, #ff518d)",
+  "--sh-comment": "light-dark(#4d4d4d, #a0a0a0)",
+} satisfies Partial<Record<`--sh-${TokenType}`, string>>;
+
+export function CodeBlock({ code, lang = DEFAULT_LANG }: CodeBlockProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -53,13 +62,12 @@ export function CodeBlock({ code }: CodeBlockProps) {
       className={cn(
         "max-h-120 overflow-auto rounded-lg p-4 text-sm/6",
         "border-hairline border-current/10",
-        "text-neutral-900 dark:text-white",
         "[&_pre]:focus-visible:outline-hidden",
-        SYNTAX,
       )}
+      style={THEME as CSSProperties}
     >
       <pre tabIndex={0}>
-        <code dangerouslySetInnerHTML={{ __html: highlight(code.trim()) }} />
+        <code dangerouslySetInnerHTML={{ __html: highlight(code.trim(), { lang }) }} />
       </pre>
     </div>
   );
