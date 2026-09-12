@@ -23,7 +23,7 @@ export function PostList({ posts }: PostListProps) {
           <Link
             href={`/blog/${post.slug}` as Route}
             className={cn(
-              "w-fit text-2xl/snug tracking-tight text-pretty",
+              "w-fit text-2xl tracking-tight text-pretty",
               "text-accent-500 dark:text-accent-400",
               "hover:text-accent-600 dark:hover:text-accent-300",
               "transition-colors duration-150 motion-reduce:transition-none",

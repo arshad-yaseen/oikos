@@ -55,7 +55,7 @@ export function H2({ children }: PropsWithChildren) {
 
 export function H3({ children }: PropsWithChildren) {
   return (
-    <Heading as="h3" className="mt-8 text-base/7 font-medium tracking-tight text-balance">
+    <Heading as="h3" className="mt-8 text-base font-medium tracking-tight text-balance">
       {children}
     </Heading>
   );

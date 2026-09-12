@@ -8,15 +8,12 @@ export function Logo({ className, ...props }: LogoProps) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      viewBox="0 0 448 256"
+      viewBox="0 0 256 221.7"
       aria-hidden="true"
       className={cn("h-8 shrink-0", className)}
       {...props}
     >
-      <path
-        fill="currentColor"
-        d="M0 0H192V64H0V0ZM0 64H64V256H0V64ZM128 64H192V256H128V64ZM64 128H128V192H64V128ZM256 0H320V64H256V0ZM384 0H448V64H384V0ZM320 64H384V256H320V64Z"
-      />
+      <path fill="currentColor" d="M128 0L256 221.7H0Z" />
     </svg>
   );
 }

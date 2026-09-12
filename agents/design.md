@@ -69,6 +69,7 @@ Numeric leadings like `/6` ride the spacing scale, so line heights compact with 
 
 - **Hierarchy comes from type first.** Tier, weight, and color before a surface, a border, or an accent.
 - **Emphasize with weight and color, never a size bump.** Nothing renders lighter than 400, headings sit between 500 and 600.
+- **A size token carries its leading.** A leading is written only where the tier table names it, `text-sm/6` and `text-base/8`, or where the size is arbitrary and has no token.
 - **Peers share a tier.** Never resize one because its string is longer or its number bigger. Rewrite before shrinking, and fix a stranded word by changing the copy or the measure, never by shrinking that element.
 - **Headings are semantic and sequential.** One h1 per page, levels never skip, the visual tier follows the semantic level, and an h3 can share prose size and stand on weight alone.
 - **Headings state the claim.** Sentence case, concrete nouns, active verbs, what changes or what to decide, never the name of the genre.
