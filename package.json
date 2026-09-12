@@ -1,5 +1,5 @@
 {
-  "name": "ground",
+  "name": "oikos",
   "private": true,
   "workspaces": [
     "apps/*",

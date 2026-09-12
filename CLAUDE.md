@@ -1,4 +1,4 @@
-# ground
+# Oikos
 
 Where I build my design system, try things out, and start every new project. Every task runs through the root scripts.
 

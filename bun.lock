@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "ground",
+      "name": "oikos",
       "devDependencies": {
         "oxfmt": "^0.66.0",
         "oxlint": "^1.81.0",
