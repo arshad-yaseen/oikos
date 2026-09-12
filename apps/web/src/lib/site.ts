@@ -8,4 +8,5 @@ export const site = {
   url,
   author: { name: "Arshad Yaseen", url: "https://arshad.fyi" },
   twitter: "@arshadyaseeen",
+  repository: "https://github.com/arshad-yaseen/oikos",
 } as const;
