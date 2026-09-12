@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { cn } from "@basis/ui/lib/cn";
-import { highlight } from "@basis/ui/lib/highlight";
+import { cn } from "@arshad/ui/lib/cn";
+import { highlight } from "@arshad/ui/lib/highlight";
 
 type CodeBlockProps = {
   code: string;

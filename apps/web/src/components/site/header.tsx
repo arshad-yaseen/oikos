@@ -4,8 +4,8 @@ import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/site/logo";
-import { ThemeToggle } from "@basis/ui/components/theme-toggle";
-import { cn } from "@basis/ui/lib/cn";
+import { ThemeToggle } from "@arshad/ui/components/theme-toggle";
+import { cn } from "@arshad/ui/lib/cn";
 
 /** One path segment up from the current page, so each logo click walks toward home. */
 function parentPath(pathname: string): Route {

@@ -1,6 +1,6 @@
 import { type Article, sourceUrl } from "@/lib/content";
-import { Button } from "@basis/ui/components/button";
-import { P } from "@basis/ui/components/prose/paragraph";
+import { Button } from "@arshad/ui/components/button";
+import { P } from "@arshad/ui/components/prose/paragraph";
 
 type ArticleHeaderProps = {
   article: Pick<Article, "title" | "description" | "source">;

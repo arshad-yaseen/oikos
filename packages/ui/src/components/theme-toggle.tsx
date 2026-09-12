@@ -1,8 +1,8 @@
 "use client";
 
-import { useTheme } from "@basis/ui/hooks/use-theme";
-import { Button } from "@basis/ui/components/button";
-import { Icon } from "@basis/ui/components/icon";
+import { useTheme } from "@arshad/ui/hooks/use-theme";
+import { Button } from "@arshad/ui/components/button";
+import { Icon } from "@arshad/ui/components/icon";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();

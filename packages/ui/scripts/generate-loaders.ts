@@ -516,7 +516,7 @@ const buildUses = (spec: Spec): string => {
 };
 
 const buildFile = (spec: Spec): string => `${HEADER}import type { CSSProperties } from "react";
-import type { LoaderProps } from "@basis/ui/types/loader-props";
+import type { LoaderProps } from "@arshad/ui/types/loader-props";
 
 const STYLE = \`${buildStyle(spec)}\`;
 

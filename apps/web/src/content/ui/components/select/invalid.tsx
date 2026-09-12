@@ -1,4 +1,4 @@
-import { Select } from "@basis/ui/components/select";
+import { Select } from "@arshad/ui/components/select";
 
 const sizes = [
   { label: "Small", value: "sm" },

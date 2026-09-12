@@ -1,5 +1,5 @@
-import { Icon } from "@basis/ui/components/icon";
-import { Select } from "@basis/ui/components/select";
+import { Icon } from "@arshad/ui/components/icon";
+import { Select } from "@arshad/ui/components/select";
 
 const appearances = [
   {

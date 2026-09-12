@@ -1,4 +1,4 @@
-import { CacheWarm } from "@basis/ui/components/dot-matrix/cache-warm";
+import { CacheWarm } from "@arshad/ui/components/dot-matrix/cache-warm";
 
 export function Sizes() {
   return (

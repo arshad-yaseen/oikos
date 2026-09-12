@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react";
-import { cn } from "@basis/ui/lib/cn";
+import { cn } from "@arshad/ui/lib/cn";
 
 // Drawn inline so the select needs no icon dependency.
 const STROKE_ICON = {

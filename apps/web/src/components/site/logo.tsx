@@ -1,5 +1,5 @@
 import type { SVGProps } from "react";
-import { cn } from "@basis/ui/lib/cn";
+import { cn } from "@arshad/ui/lib/cn";
 
 type LogoProps = SVGProps<SVGSVGElement>;
 

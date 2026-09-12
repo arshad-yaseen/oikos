@@ -1,4 +1,4 @@
-import { Select } from "@basis/ui/components/select";
+import { Select } from "@arshad/ui/components/select";
 
 const themes = [
   { label: "System", value: "system" },

@@ -4,8 +4,8 @@ import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Page } from "@/lib/content";
-import { Icon } from "@basis/ui/components/icon";
-import { cn } from "@basis/ui/lib/cn";
+import { Icon } from "@arshad/ui/components/icon";
+import { cn } from "@arshad/ui/lib/cn";
 
 const CHEVRON = cn(
   "mt-0.5 hidden size-4 pointer-fine:block",

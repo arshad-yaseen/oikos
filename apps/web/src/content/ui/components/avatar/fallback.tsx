@@ -1,4 +1,4 @@
-import { Avatar } from "@basis/ui/components/avatar";
+import { Avatar } from "@arshad/ui/components/avatar";
 
 export function Fallback() {
   return (

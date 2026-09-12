@@ -1,5 +1,5 @@
-import { A } from "@basis/ui/components/prose/anchor";
-import { P } from "@basis/ui/components/prose/paragraph";
+import { A } from "@arshad/ui/components/prose/anchor";
+import { P } from "@arshad/ui/components/prose/paragraph";
 import type { Article } from "@/lib/content";
 
 export const introduction = {

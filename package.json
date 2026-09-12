@@ -1,5 +1,5 @@
 {
-  "name": "basis",
+  "name": "ui",
   "private": true,
   "workspaces": [
     "apps/*",

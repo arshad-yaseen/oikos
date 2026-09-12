@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react";
-import { cn } from "@basis/ui/lib/cn";
+import { cn } from "@arshad/ui/lib/cn";
 
 export function InlineCode({ children }: PropsWithChildren) {
   return (

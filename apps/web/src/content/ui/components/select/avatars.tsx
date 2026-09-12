@@ -1,5 +1,5 @@
-import { Avatar } from "@basis/ui/components/avatar";
-import { Select } from "@basis/ui/components/select";
+import { Avatar } from "@arshad/ui/components/avatar";
+import { Select } from "@arshad/ui/components/select";
 
 const people = [
   { value: "lara", name: "Lara Tucci", initials: "LT", src: "/avatars/lara.svg" },

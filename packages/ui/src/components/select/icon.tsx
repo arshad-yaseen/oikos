@@ -1,6 +1,6 @@
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { ChevronUpDownIcon } from "@basis/ui/components/select/icons";
-import { cn } from "@basis/ui/lib/cn";
+import { ChevronUpDownIcon } from "@arshad/ui/components/select/icons";
+import { cn } from "@arshad/ui/lib/cn";
 
 export type SelectIconProps = SelectPrimitive.Icon.Props;
 
