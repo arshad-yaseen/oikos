@@ -1,5 +1,5 @@
-import { writingAPost } from "@/content/blog/writing-a-post";
+import { floatingPoint } from "@/content/blog/floating-point";
 import type { DatedArticle } from "@/lib/content";
 import { byDate } from "@/lib/date";
 
-export const posts: DatedArticle[] = [writingAPost].toSorted(byDate);
+export const posts: DatedArticle[] = [floatingPoint].toSorted(byDate);
