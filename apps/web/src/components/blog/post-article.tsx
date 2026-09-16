@@ -25,7 +25,7 @@ export function PostArticle({ post, children }: PostArticleProps) {
         className={cn(
           "flex flex-col gap-6",
           // Code blocks are bare in the component docs, but filled inside a post.
-          "**:data-[slot=code-block]:bg-neutral-100/6",
+          "**:data-[slot=code-block]:bg-neutral-100/60",
           "dark:**:data-[slot=code-block]:bg-neutral-900/60",
         )}
       >
