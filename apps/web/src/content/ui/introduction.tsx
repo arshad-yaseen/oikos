@@ -15,16 +15,14 @@ export const introduction = {
         here is what ships.
       </P>
       <P>
-        Each component page shows the component in its states and variants, with the source of every
-        example beneath it. Components are built on <A href="https://base-ui.com">Base UI</A>,
+        Components are built on <A href="https://base-ui.com">Base UI</A>,
         unstyled accessible primitives, and styled with{" "}
         <A href="https://tailwindcss.com">Tailwind CSS</A>.
       </P>
 
       <H2>Built for agents</H2>
       <P>
-        Everything in Oikos is explicit. What a piece of code does is written where it is used, so
-        nothing happens that you cannot see there. Styles are plain utilities, colors name both of
+        Everything in Oikos is explicit. Styles are plain utilities, colors name both of
         their modes, and a component owns only the behaviour that is hard to get right, a select or
         a dialog, and leaves every other decision to the caller.
       </P>
