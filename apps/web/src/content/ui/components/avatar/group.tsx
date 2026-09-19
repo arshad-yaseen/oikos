@@ -1,9 +1,9 @@
 import { Avatar } from "@oikos/ui/components/avatar";
 
 const people = [
-  { name: "Lara Tucci", initials: "LT", src: "/avatars/lara.svg" },
-  { name: "Devon Lane", initials: "DL", src: "/avatars/devon.svg" },
-  { name: "Noah Pierre", initials: "NP", src: "/avatars/noah.svg" },
+  { name: "Lara Tucci", initials: "LT", src: "/avatars/lara.webp" },
+  { name: "Devon Lane", initials: "DL", src: "/avatars/devon.webp" },
+  { name: "Noah Pierre", initials: "NP", src: "/avatars/noah.webp" },
 ];
 
 export function Group() {

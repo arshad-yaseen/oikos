@@ -4,7 +4,6 @@ import { websiteJsonLd } from "@/lib/json-ld";
 
 export default function Home() {
   return (
-    // The hero's rules span the viewport, and 100vw includes the scrollbar, so clip the overflow.
     <main className="overflow-x-clip px-(--layout-padding)">
       <JsonLd schema={websiteJsonLd()} />
       <Hero />

@@ -2,9 +2,9 @@ import { Avatar } from "@oikos/ui/components/avatar";
 import { Select } from "@oikos/ui/components/select";
 
 const people = [
-  { value: "lara", name: "Lara Tucci", initials: "LT", src: "/avatars/lara.svg" },
-  { value: "devon", name: "Devon Lane", initials: "DL", src: "/avatars/devon.svg" },
-  { value: "noah", name: "Noah Pierre", initials: "NP", src: "/avatars/noah.svg" },
+  { value: "lara", name: "Lara Tucci", initials: "LT", src: "/avatars/lara.webp" },
+  { value: "devon", name: "Devon Lane", initials: "DL", src: "/avatars/devon.webp" },
+  { value: "noah", name: "Noah Pierre", initials: "NP", src: "/avatars/noah.webp" },
 ];
 
 const items = people.map((person) => ({

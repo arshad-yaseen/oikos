@@ -8,7 +8,7 @@ export function ItemDescription({ className, ...props }: SelectItemDescriptionPr
     <div
       data-slot="select-item-description"
       className={cn(
-        "col-start-2 -mt-0.5 min-w-0 truncate pb-0.5",
+        "col-start-2 min-w-0 truncate pb-0.5",
         "text-xs text-neutral-500 dark:text-neutral-400",
         className,
       )}
