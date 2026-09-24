@@ -26,18 +26,28 @@ const isScrolledOnServer = (): boolean => false;
 
 export function Header() {
   const pathname = usePathname();
+  const isBlog = pathname.startsWith("/blog");
+  const isHome = pathname === "/";
   const isScrolled = useSyncExternalStore(subscribeToScroll, isScrolledNow, isScrolledOnServer);
 
   return (
     <header
       data-scrolled={isScrolled || undefined}
       className={cn(
-        "sticky top-0 z-10 px-(--layout-padding)",
-        "border-b-hairline border-transparent",
-        "data-scrolled:border-current/10 data-scrolled:bg-background",
+        "sticky top-0 z-10 border-b-hairline",
+        isBlog
+          ? "border-transparent data-scrolled:border-current/10 data-scrolled:bg-background"
+          : "border-current/10 bg-background",
       )}
     >
-      <div className="mx-auto flex h-(--header-height) max-w-(--layout-width) items-center justify-between">
+      <div
+        className={cn(
+          "mx-auto flex h-(--header-height) items-center justify-between",
+          "max-w-[calc(var(--layout-width)+var(--layout-padding)*2)] px-(--layout-padding)",
+          "border-x-hairline",
+          isHome ? "border-current/10" : "border-transparent",
+        )}
+      >
         <Link href={parentPath(pathname)} aria-label={site.name} className="shrink-0">
           <Logo className="h-6" />
         </Link>

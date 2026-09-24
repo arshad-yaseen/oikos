@@ -4,7 +4,7 @@ import { websiteJsonLd } from "@/lib/json-ld";
 
 export default function Home() {
   return (
-    <main className="overflow-x-clip px-(--layout-padding)">
+    <main className="overflow-x-clip">
       <JsonLd schema={websiteJsonLd()} />
       <Hero />
     </main>

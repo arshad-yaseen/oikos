@@ -6,7 +6,14 @@ import { cn } from "@oikos/ui/lib/cn";
 
 export function Hero() {
   return (
-    <section className="mx-auto flex max-w-(--layout-width) flex-col items-center gap-8 pt-16">
+    <section
+      className={cn(
+        "mx-auto flex flex-col items-center gap-8 pt-16",
+        "max-w-[calc(var(--layout-width)+var(--layout-padding)*2)] px-(--layout-padding)",
+        "min-h-[calc(100dvh-var(--header-height)-var(--hairline-width))]",
+        "border-x-hairline border-current/10",
+      )}
+    >
       <div className="flex w-full flex-col items-center gap-6">
         <div
           className={cn(
