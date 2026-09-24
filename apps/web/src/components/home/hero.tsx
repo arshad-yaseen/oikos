@@ -32,9 +32,14 @@ export function Hero() {
           {site.description}
         </p>
 
-        <Button className="rounded-full" size="lg" render={<Link href={"/ui" as Route} />}>
-          Explore UI
-        </Button>
+        <div className="flex gap-2">
+          <Button className="rounded-full" render={<Link href={"/ui" as Route} />}>
+            Explore UI
+          </Button>
+          <Button variant="outline" className="rounded-full" render={<Link href="/blog" />}>
+            Blog
+          </Button>
+        </div>
       </div>
     </section>
   );

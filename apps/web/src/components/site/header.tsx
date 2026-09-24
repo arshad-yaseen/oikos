@@ -5,8 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/site/logo";
 import { site } from "@/lib/site";
-import { Button } from "@oikos/ui/components/button";
-import { Icon } from "@oikos/ui/components/icon";
 import { ThemeToggle } from "@oikos/ui/components/theme-toggle";
 import { cn } from "@oikos/ui/lib/cn";
 
@@ -29,18 +27,7 @@ export function Header() {
         <Link href={parentPath(pathname)} aria-label={site.name} className="shrink-0">
           <Logo className="h-6" />
         </Link>
-        <div className="flex items-center gap-2">
-          <Button
-            variant="outline"
-            color="neutral"
-            className="rounded-full"
-            render={<a href={site.repository} target="_blank" rel="noreferrer" />}
-          >
-            GitHub
-            <Icon name="ArrowUpRight" />
-          </Button>
-          <ThemeToggle className="rounded-full" />
-        </div>
+        <ThemeToggle className="rounded-full" />
       </div>
     </header>
   );
