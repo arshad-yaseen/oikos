@@ -8,50 +8,32 @@ export function Hero() {
   return (
     <section
       className={cn(
-        "mx-auto flex flex-col items-center gap-8 pt-16",
-        "max-w-[calc(var(--layout-width)+var(--layout-padding)*2)] px-(--layout-padding)",
-        "min-h-[calc(100dvh-var(--header-height)-var(--hairline-width))]",
-        "border-x-hairline border-current/10",
+        "mx-auto grid max-w-(--layout-width) gap-8 pt-16 sm:pt-24",
+        "md:grid-cols-2 md:gap-x-12",
       )}
     >
-      <div className="flex w-full flex-col items-center gap-6">
-        <div
-          className={cn(
-            "relative w-full",
-            "before:absolute before:top-0 before:left-1/2 before:w-screen before:-translate-x-1/2 before:content-['']",
-            "after:absolute after:bottom-0 after:left-1/2 after:w-screen after:-translate-x-1/2 after:content-['']",
-            "before:border-t-hairline after:border-b-hairline",
-            "before:border-current/10 after:border-current/10",
-            "before:pointer-events-none after:pointer-events-none",
-          )}
-        >
-          <h1
-            className={cn(
-              "text-5xl font-normal tracking-tighter",
-              "text-center text-balance",
-              "[text-box:trim-both_cap_alphabetic]",
-            )}
-          >
-            Where every project starts.
-          </h1>
-        </div>
+      <h1
+        className={cn(
+          "text-4xl font-normal tracking-tighter text-balance sm:text-5xl",
+          "[text-box:trim-both_cap_alphabetic]",
+        )}
+      >
+        Where every project starts.
+      </h1>
 
+      <div className="flex flex-col items-start gap-10 md:items-end md:justify-between md:gap-4">
         <p
           className={cn(
-            "max-w-2xl text-center text-base/8 text-pretty",
+            "max-w-sm text-base text-pretty md:text-right",
+            "[text-box:trim-both_cap_alphabetic]",
             "text-neutral-600 dark:text-neutral-400",
           )}
         >
           {site.description}
         </p>
-      </div>
 
-      <div className="flex flex-wrap justify-center gap-2">
-        <Button className="rounded-full" render={<Link href={"/ui" as Route} />}>
+        <Button className="rounded-full" size="lg" render={<Link href={"/ui" as Route} />}>
           Explore UI
-        </Button>
-        <Button variant="outline" className="rounded-full" render={<Link href="/blog" />}>
-          Blog
         </Button>
       </div>
     </section>
