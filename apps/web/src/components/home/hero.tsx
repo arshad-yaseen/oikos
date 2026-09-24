@@ -14,7 +14,7 @@ export function Hero() {
     >
       <h1
         className={cn(
-          "text-4xl font-normal tracking-tighter text-balance sm:text-5xl",
+          "text-4xl/12 font-normal tracking-tighter text-balance sm:text-5xl/16",
           "[text-box:trim-both_cap_alphabetic]",
         )}
       >

@@ -26,9 +26,6 @@
   --text-2xs--line-height: calc(16 / 11);
   --text-2xs--letter-spacing: 0.02em;
 
-  --text-4xl--line-height: calc(42 / 36);
-  --text-5xl--line-height: calc(56 / 48);
-
   --radius-md: 0.3125rem;
 
   --font-weight-light: 300;
