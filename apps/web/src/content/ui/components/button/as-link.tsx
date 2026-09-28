@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@oikos/ui/components/button";
 import { Icon } from "@oikos/ui/components/icon";
-import { Route } from "next";
+import type { Route } from "next";
 
 export function AsLink() {
   return (
