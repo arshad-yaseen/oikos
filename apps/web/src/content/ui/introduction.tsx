@@ -15,16 +15,15 @@ export const introduction = {
         here is what ships.
       </P>
       <P>
-        Components are built on <A href="https://base-ui.com">Base UI</A>,
-        unstyled accessible primitives, and styled with{" "}
-        <A href="https://tailwindcss.com">Tailwind CSS</A>.
+        Components are built on <A href="https://base-ui.com">Base UI</A>, unstyled accessible
+        primitives, and styled with <A href="https://tailwindcss.com">Tailwind CSS</A>.
       </P>
 
       <H2>Built for agents</H2>
       <P>
-        Everything in Oikos is explicit. Styles are plain utilities, colors name both of
-        their modes, and a component owns only the behaviour that is hard to get right, a select or
-        a dialog, and leaves every other decision to the caller.
+        Everything in Oikos is explicit. Styles are plain utilities, colors name both of their
+        modes, and a component owns only the behaviour that is hard to get right, a select or a
+        dialog, and leaves every other decision to the caller.
       </P>
       <P>
         An agent is strongest on what it already knows, the platform, and weakest on what it has to
