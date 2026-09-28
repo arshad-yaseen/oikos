@@ -1,10 +1,15 @@
 import { Logo } from "@/components/site/logo";
 import { ParentLink } from "@/components/site/parent-link";
-import { site } from "@/lib/site";
+import type { NavItem } from "@/lib/content";
 import { ThemeToggle } from "@oikos/ui/components/theme-toggle";
 import { cn } from "@oikos/ui/lib/cn";
 
-export function Header() {
+type HeaderProps = {
+  /** The pages the logo can walk up through besides home. */
+  pages?: NavItem[];
+};
+
+export function Header({ pages }: HeaderProps) {
   return (
     <header
       className={cn(
@@ -13,7 +18,7 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-(--header-height) max-w-(--layout-width) items-center justify-between">
-        <ParentLink aria-label={site.name} className="shrink-0">
+        <ParentLink pages={pages} className="shrink-0">
           <Logo className="h-6" />
         </ParentLink>
         <ThemeToggle className="rounded-full" />

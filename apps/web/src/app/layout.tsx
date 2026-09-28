@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import type { PropsWithChildren } from "react";
-import { Header } from "@/components/site/header";
 import { ScrollToHash } from "@/components/site/scroll-to-hash";
 import { OG_SIZE, ogImageUrl } from "@/lib/metadata";
 import { site } from "@/lib/site";
@@ -61,7 +60,6 @@ export default function RootLayout({ children }: PropsWithChildren) {
         )}
       >
         <ThemeProvider>
-          <Header />
           {children}
           <ScrollToHash />
         </ThemeProvider>
