@@ -55,10 +55,13 @@ export const loaders = {
           { name: "size", type: "number", default: "24" },
           { name: "speed", type: "number", default: "1" },
           { name: "color", type: "string", default: "currentColor" },
-          { name: "className", type: "string" },
           { name: "aria-label", type: "string", default: '"Loading"' },
         ]}
       />
+      <P>
+        Plus every SVG attribute, including <InlineCode>className</InlineCode>,{" "}
+        <InlineCode>style</InlineCode>, and <InlineCode>ref</InlineCode>.
+      </P>
     </>
   ),
 } satisfies Article;

@@ -480,18 +480,35 @@ const buildUses = (spec: Spec): string => {
   return lines.join("\n");
 };
 
-const buildFile = (spec: Spec): string => `${HEADER}import type { CSSProperties } from "react";
-import type { LoaderProps } from "@oikos/ui/types/loader-props";
+const buildFile = (spec: Spec): string => {
+  const name = pascal(spec.id);
+
+  return `${HEADER}import type { ComponentProps, CSSProperties } from "react";
 
 const STYLE = \`${buildStyle(spec)}\`;
 
-export function ${pascal(spec.id)}({
+export type ${name}Props = Omit<ComponentProps<"svg">, "color"> & {
+  /** Width and height of the SVG, in pixels. */
+  size?: number;
+  /** Animation speed multiplier. Higher is faster. */
+  speed?: number;
+  /** Any CSS color. Defaults to \`currentColor\` (the theme foreground). */
+  color?: string;
+  /** Accessible name. Defaults to "Loading", what the animation signals. */
+  "aria-label"?: string;
+};
+
+export function ${name}({
   size = 24,
   speed,
   color,
-  className,
+  style,
   "aria-label": ariaLabel = "Loading",
-}: LoaderProps = {}) {
+  ...props
+}: ${name}Props) {
+  // CSSProperties has no key for a custom property such as --speed.
+  const variables = { "--speed": speed } as CSSProperties;
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -501,8 +518,8 @@ export function ${pascal(spec.id)}({
       role="img"
       data-slot="icon"
       aria-label={ariaLabel}
-      className={className}
-      style={{ color, "--speed": speed } as CSSProperties}
+      {...props}
+      style={{ color, ...variables, ...style }}
     >
       <desc>${spec.desc}</desc>
       <defs>
@@ -514,6 +531,7 @@ ${buildUses(spec)}
   );
 }
 `;
+};
 
 mkdirSync(OUT, { recursive: true });
 for (const spec of SPECS) writeFileSync(join(OUT, `${spec.id}.tsx`), buildFile(spec));

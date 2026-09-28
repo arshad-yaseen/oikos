@@ -58,7 +58,8 @@ export const button = {
       <H2>Loading</H2>
       <P>
         Pass <InlineCode>disabled</InlineCode> and drop a dot matrix loader in as the icon for a
-        loading state.
+        loading state. Mark the loader <InlineCode>aria-hidden</InlineCode>, since the label already
+        says what is happening.
       </P>
       <Demo name="ui/components/button/loading">
         <Loading />
