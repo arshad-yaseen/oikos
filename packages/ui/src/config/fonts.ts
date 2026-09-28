@@ -20,8 +20,8 @@ const sans = Inter({
 });
 
 const serif = Libre_Baskerville({
-  weight: ["400", "700"],
   variable: "--font-serif",
+  subsets: ["latin"],
   display: "swap",
 });
 
