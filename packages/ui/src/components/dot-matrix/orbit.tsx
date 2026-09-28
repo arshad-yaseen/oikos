@@ -15,7 +15,7 @@ export function Orbit({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -25,11 +25,10 @@ export function Orbit({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Orbit"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Orbit</title>
       <desc>A dot circles the perimeter.</desc>
       <defs>
         <circle id="orbit-dot" r="3.1" fill="currentColor" />

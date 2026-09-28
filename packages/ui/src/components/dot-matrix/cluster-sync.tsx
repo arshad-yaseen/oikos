@@ -24,7 +24,7 @@ export function ClusterSync({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -34,11 +34,10 @@ export function ClusterSync({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Cluster Sync"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Cluster Sync</title>
       <desc>Quadrants sync in turn around an empty cross.</desc>
       <defs>
         <circle id="cluster-sync-dot" r="3.1" fill="currentColor" />

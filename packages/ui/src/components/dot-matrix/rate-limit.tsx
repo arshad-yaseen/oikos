@@ -16,7 +16,7 @@ export function RateLimit({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -26,11 +26,10 @@ export function RateLimit({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Rate Limit"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Rate Limit</title>
       <desc>The middle row gates through in bursts.</desc>
       <defs>
         <circle id="rate-limit-dot" r="3.1" fill="currentColor" />

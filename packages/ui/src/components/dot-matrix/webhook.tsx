@@ -36,7 +36,7 @@ export function Webhook({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -46,11 +46,10 @@ export function Webhook({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Webhook"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Webhook</title>
       <desc>A pulse radiates outward on each call.</desc>
       <defs>
         <circle id="webhook-dot" r="3.1" fill="currentColor" />

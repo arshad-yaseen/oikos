@@ -21,7 +21,7 @@ export function TwinHelix({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -31,11 +31,10 @@ export function TwinHelix({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Twin Helix"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Twin Helix</title>
       <desc>Two strands pulse out of phase.</desc>
       <defs>
         <circle id="twin-helix-dot" r="3.1" fill="currentColor" />

@@ -37,7 +37,7 @@ export function Hash({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -47,11 +47,10 @@ export function Hash({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Hash"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Hash</title>
       <desc>Cells flicker in a scattered, fixed pattern.</desc>
       <defs>
         <circle id="hash-dot" r="3.1" fill="currentColor" />

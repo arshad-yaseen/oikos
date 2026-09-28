@@ -28,7 +28,7 @@ export function Snowflake({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -38,11 +38,10 @@ export function Snowflake({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Snowflake"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Snowflake</title>
       <desc>A six-fold flake shimmers softly.</desc>
       <defs>
         <circle id="snowflake-dot" r="3.1" fill="currentColor" />

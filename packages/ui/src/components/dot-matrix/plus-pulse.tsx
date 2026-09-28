@@ -20,7 +20,7 @@ export function PlusPulse({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -30,11 +30,10 @@ export function PlusPulse({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Plus Pulse"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Plus Pulse</title>
       <desc>A plus shape pulses in and out.</desc>
       <defs>
         <circle id="plus-pulse-dot" r="3.1" fill="currentColor" />

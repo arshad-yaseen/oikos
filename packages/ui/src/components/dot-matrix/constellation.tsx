@@ -37,7 +37,7 @@ export function Constellation({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -47,11 +47,10 @@ export function Constellation({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Constellation"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Constellation</title>
       <desc>Stars twinkle on a deterministic loop.</desc>
       <defs>
         <circle id="constellation-dot" r="3.1" fill="currentColor" />

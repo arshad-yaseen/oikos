@@ -36,7 +36,7 @@ export function Ripple({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -46,11 +46,10 @@ export function Ripple({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Ripple"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Ripple</title>
       <desc>Rings ripple outward from the center.</desc>
       <defs>
         <circle id="ripple-dot" r="3.1" fill="currentColor" />

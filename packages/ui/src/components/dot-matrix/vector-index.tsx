@@ -36,7 +36,7 @@ export function VectorIndex({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -46,11 +46,10 @@ export function VectorIndex({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Vector Index"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Vector Index</title>
       <desc>Diagonals index across the grid.</desc>
       <defs>
         <circle id="vector-index-dot" r="3.1" fill="currentColor" />

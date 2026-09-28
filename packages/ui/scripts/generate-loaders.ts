@@ -25,7 +25,6 @@ type Dot = {
 
 type Spec = {
   id: string;
-  name: string;
   desc: string;
   dur: number;
   easing: string;
@@ -85,7 +84,6 @@ const STAR = new Set([2, 6, 7, 8, 10, 11, 13, 14, 16, 17, 18, 22]);
 const SPECS: Spec[] = [
   {
     id: "attention",
-    name: "Attention",
     desc: "Rows light top to bottom in a steady sweep.",
     dur: 1800,
     easing: "linear",
@@ -94,7 +92,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "auth-handshake",
-    name: "Auth Handshake",
     desc: "Left and right halves flash and meet in the middle.",
     dur: 2000,
     easing: "linear",
@@ -109,7 +106,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "backprop",
-    name: "Backprop",
     desc: "Pulses propagate forward then back across columns.",
     dur: 2800,
     easing: "linear",
@@ -119,7 +115,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "beacon",
-    name: "Beacon",
     desc: "A bright pulse rotates around the grid.",
     dur: 2400,
     easing: "linear",
@@ -128,7 +123,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "bloom",
-    name: "Bloom",
     desc: "Brightness blooms outward along the diagonal.",
     dur: 2600,
     easing: "ease-in-out",
@@ -137,7 +131,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "cache-warm",
-    name: "Cache Warm",
     desc: "Warmth spreads from the corners inward.",
     dur: 2600,
     easing: CB1,
@@ -148,7 +141,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "cluster-sync",
-    name: "Cluster Sync",
     desc: "Quadrants sync in turn around an empty cross.",
     dur: 2400,
     easing: CB_CLUSTER,
@@ -163,7 +155,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "compile",
-    name: "Compile",
     desc: "Rows resolve from the bottom up.",
     dur: 2000,
     easing: "linear",
@@ -172,7 +163,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "constellation",
-    name: "Constellation",
     desc: "Stars twinkle on a deterministic loop.",
     dur: 3500,
     easing: "ease-in-out",
@@ -181,7 +171,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "cron",
-    name: "Cron",
     desc: "The outer ring ticks around like a clock.",
     dur: 2000,
     easing: "linear",
@@ -192,7 +181,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "deploy",
-    name: "Deploy",
     desc: "Columns roll out left to right.",
     dur: 1600,
     easing: "linear",
@@ -201,7 +189,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "diffusion",
-    name: "Diffusion",
     desc: "Noise resolves into a steady signal.",
     dur: 3000,
     easing: CB1,
@@ -215,7 +202,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "drift",
-    name: "Drift",
     desc: "A soft wave drifts along the diagonal.",
     dur: 3200,
     easing: CB_DRIFT,
@@ -226,7 +212,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "embedding",
-    name: "Embedding",
     desc: "Brightness collapses inward to the center.",
     dur: 2400,
     easing: CB1,
@@ -235,7 +220,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "flower-bloom",
-    name: "Flower Bloom",
     desc: "Petals brighten and fade around the core.",
     dur: 3000,
     easing: "ease-in-out",
@@ -245,7 +229,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "gradient-descent",
-    name: "Gradient Descent",
     desc: "Rows descend, fading as they settle.",
     dur: 2400,
     easing: CB_GRAD,
@@ -254,7 +237,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "hash",
-    name: "Hash",
     desc: "Cells flicker in a scattered, fixed pattern.",
     dur: 1400,
     easing: "linear",
@@ -263,7 +245,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "heart-pulse",
-    name: "Heart Pulse",
     desc: "A heart beats with a double thump.",
     dur: 1600,
     easing: "ease-out",
@@ -275,7 +256,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "helix",
-    name: "Helix",
     desc: "Brightness winds around like a strand.",
     dur: 2600,
     easing: CB1,
@@ -284,7 +264,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "index-build",
-    name: "Index Build",
     desc: "Pairs build inward from the edges.",
     dur: 2800,
     easing: CB1,
@@ -293,7 +272,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "lattice",
-    name: "Lattice",
     desc: "The grid breathes in two phases.",
     dur: 2400,
     easing: CB1,
@@ -302,7 +280,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "orbit",
-    name: "Orbit",
     desc: "A dot circles the perimeter.",
     dur: 2000,
     easing: CB1,
@@ -312,7 +289,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "plus-pulse",
-    name: "Plus Pulse",
     desc: "A plus shape pulses in and out.",
     dur: 1600,
     easing: CB_PLUS,
@@ -322,7 +298,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "quantize",
-    name: "Quantize",
     desc: "Cells snap between levels in steps.",
     dur: 3000,
     easing: "steps(1, end)",
@@ -333,7 +308,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "rate-limit",
-    name: "Rate Limit",
     desc: "The middle row gates through in bursts.",
     dur: 2400,
     easing: "steps(1, end)",
@@ -345,7 +319,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "ripple",
-    name: "Ripple",
     desc: "Rings ripple outward from the center.",
     dur: 2400,
     easing: "ease-out",
@@ -354,7 +327,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "snowflake",
-    name: "Snowflake",
     desc: "A six-fold flake shimmers softly.",
     dur: 2600,
     easing: "ease-in-out",
@@ -364,7 +336,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "sound-bars",
-    name: "Sound Bars",
     desc: "Columns rise and fall like a meter.",
     dur: 1400,
     easing: "ease-in-out",
@@ -376,7 +347,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "star-burst",
-    name: "Star Burst",
     desc: "A star flares from the center.",
     dur: 2200,
     easing: "ease-in-out",
@@ -386,7 +356,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "sync",
-    name: "Sync",
     desc: "The four corners flash in rotation.",
     dur: 1600,
     easing: CB_CLUSTER,
@@ -399,7 +368,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "token-stream",
-    name: "Token Stream",
     desc: "Tokens emit column by column.",
     dur: 2000,
     easing: "linear",
@@ -408,7 +376,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "twin-helix",
-    name: "Twin Helix",
     desc: "Two strands pulse out of phase.",
     dur: 2400,
     easing: "ease-in-out",
@@ -422,7 +389,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "vector-index",
-    name: "Vector Index",
     desc: "Diagonals index across the grid.",
     dur: 2400,
     easing: "linear",
@@ -431,7 +397,6 @@ const SPECS: Spec[] = [
   },
   {
     id: "webhook",
-    name: "Webhook",
     desc: "A pulse radiates outward on each call.",
     dur: 2400,
     easing: CB_CLUSTER,
@@ -525,7 +490,7 @@ export function ${pascal(spec.id)}({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -535,11 +500,10 @@ export function ${pascal(spec.id)}({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "${spec.name}"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>${spec.name}</title>
       <desc>${spec.desc}</desc>
       <defs>
         <circle id="${spec.id}-dot" r="3.1" fill="currentColor" />

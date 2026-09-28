@@ -32,7 +32,7 @@ export function FlowerBloom({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -42,11 +42,10 @@ export function FlowerBloom({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Flower Bloom"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Flower Bloom</title>
       <desc>Petals brighten and fade around the core.</desc>
       <defs>
         <circle id="flower-bloom-dot" r="3.1" fill="currentColor" />

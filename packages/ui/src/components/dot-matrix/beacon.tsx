@@ -35,7 +35,7 @@ export function Beacon({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -45,11 +45,10 @@ export function Beacon({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Beacon"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Beacon</title>
       <desc>A bright pulse rotates around the grid.</desc>
       <defs>
         <circle id="beacon-dot" r="3.1" fill="currentColor" />

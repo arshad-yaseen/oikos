@@ -32,7 +32,7 @@ export function TokenStream({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -42,11 +42,10 @@ export function TokenStream({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Token Stream"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Token Stream</title>
       <desc>Tokens emit column by column.</desc>
       <defs>
         <circle id="token-stream-dot" r="3.1" fill="currentColor" />

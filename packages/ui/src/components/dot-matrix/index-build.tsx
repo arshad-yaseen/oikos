@@ -35,7 +35,7 @@ export function IndexBuild({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -45,11 +45,10 @@ export function IndexBuild({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Index Build"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Index Build</title>
       <desc>Pairs build inward from the edges.</desc>
       <defs>
         <circle id="index-build-dot" r="3.1" fill="currentColor" />

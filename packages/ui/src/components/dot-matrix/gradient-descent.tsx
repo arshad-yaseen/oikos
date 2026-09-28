@@ -32,7 +32,7 @@ export function GradientDescent({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -42,11 +42,10 @@ export function GradientDescent({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Gradient Descent"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Gradient Descent</title>
       <desc>Rows descend, fading as they settle.</desc>
       <defs>
         <circle id="gradient-descent-dot" r="3.1" fill="currentColor" />

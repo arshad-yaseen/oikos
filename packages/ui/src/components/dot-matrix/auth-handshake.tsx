@@ -25,7 +25,7 @@ export function AuthHandshake({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -35,11 +35,10 @@ export function AuthHandshake({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Auth Handshake"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Auth Handshake</title>
       <desc>Left and right halves flash and meet in the middle.</desc>
       <defs>
         <circle id="auth-handshake-dot" r="3.1" fill="currentColor" />

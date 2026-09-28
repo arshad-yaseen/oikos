@@ -37,7 +37,7 @@ export function SoundBars({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -47,11 +47,10 @@ export function SoundBars({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Sound Bars"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Sound Bars</title>
       <desc>Columns rise and fall like a meter.</desc>
       <defs>
         <circle id="sound-bars-dot" r="3.1" fill="currentColor" />

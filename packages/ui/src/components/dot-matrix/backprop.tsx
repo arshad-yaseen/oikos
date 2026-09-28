@@ -37,7 +37,7 @@ export function Backprop({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -47,11 +47,10 @@ export function Backprop({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Backprop"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Backprop</title>
       <desc>Pulses propagate forward then back across columns.</desc>
       <defs>
         <circle id="backprop-dot" r="3.1" fill="currentColor" />

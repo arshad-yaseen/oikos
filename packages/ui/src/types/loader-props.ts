@@ -6,5 +6,6 @@ export type LoaderProps = {
   /** Any CSS color. Defaults to `currentColor` (the theme foreground). */
   color?: string;
   className?: string;
+  /** Accessible name. Defaults to "Loading", what the animation signals. */
   "aria-label"?: string;
 };

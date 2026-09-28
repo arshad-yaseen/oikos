@@ -33,7 +33,7 @@ export function Lattice({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -43,11 +43,10 @@ export function Lattice({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Lattice"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Lattice</title>
       <desc>The grid breathes in two phases.</desc>
       <defs>
         <circle id="lattice-dot" r="3.1" fill="currentColor" />

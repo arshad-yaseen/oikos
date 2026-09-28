@@ -33,7 +33,7 @@ export function CacheWarm({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -43,11 +43,10 @@ export function CacheWarm({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Cache Warm"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Cache Warm</title>
       <desc>Warmth spreads from the corners inward.</desc>
       <defs>
         <circle id="cache-warm-dot" r="3.1" fill="currentColor" />

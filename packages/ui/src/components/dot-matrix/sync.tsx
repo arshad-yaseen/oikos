@@ -16,7 +16,7 @@ export function Sync({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -26,11 +26,10 @@ export function Sync({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Sync"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Sync</title>
       <desc>The four corners flash in rotation.</desc>
       <defs>
         <circle id="sync-dot" r="3.1" fill="currentColor" />

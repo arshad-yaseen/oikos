@@ -19,7 +19,7 @@ export function Diffusion({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -29,11 +29,10 @@ export function Diffusion({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Diffusion"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Diffusion</title>
       <desc>Noise resolves into a steady signal.</desc>
       <defs>
         <circle id="diffusion-dot" r="3.1" fill="currentColor" />

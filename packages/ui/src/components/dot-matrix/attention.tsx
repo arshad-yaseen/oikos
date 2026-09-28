@@ -32,7 +32,7 @@ export function Attention({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -42,11 +42,10 @@ export function Attention({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Attention"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Attention</title>
       <desc>Rows light top to bottom in a steady sweep.</desc>
       <defs>
         <circle id="attention-dot" r="3.1" fill="currentColor" />

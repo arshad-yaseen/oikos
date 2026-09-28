@@ -27,7 +27,7 @@ export function Cron({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -37,11 +37,10 @@ export function Cron({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Cron"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Cron</title>
       <desc>The outer ring ticks around like a clock.</desc>
       <defs>
         <circle id="cron-dot" r="3.1" fill="currentColor" />

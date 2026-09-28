@@ -36,7 +36,7 @@ export function Drift({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -46,11 +46,10 @@ export function Drift({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Drift"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Drift</title>
       <desc>A soft wave drifts along the diagonal.</desc>
       <defs>
         <circle id="drift-dot" r="3.1" fill="currentColor" />

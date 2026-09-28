@@ -35,7 +35,7 @@ export function Helix({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -45,11 +45,10 @@ export function Helix({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Helix"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Helix</title>
       <desc>Brightness winds around like a strand.</desc>
       <defs>
         <circle id="helix-dot" r="3.1" fill="currentColor" />

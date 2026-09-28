@@ -24,7 +24,7 @@ export function StarBurst({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -34,11 +34,10 @@ export function StarBurst({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Star Burst"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Star Burst</title>
       <desc>A star flares from the center.</desc>
       <defs>
         <circle id="star-burst-dot" r="3.1" fill="currentColor" />

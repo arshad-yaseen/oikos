@@ -32,7 +32,7 @@ export function Deploy({
   speed,
   color,
   className,
-  "aria-label": ariaLabel,
+  "aria-label": ariaLabel = "Loading",
 }: LoaderProps = {}) {
   return (
     <svg
@@ -42,11 +42,10 @@ export function Deploy({
       height={size}
       role="img"
       data-slot="icon"
-      aria-label={ariaLabel ?? "Deploy"}
+      aria-label={ariaLabel}
       className={className}
       style={{ color, "--speed": speed } as CSSProperties}
     >
-      <title>Deploy</title>
       <desc>Columns roll out left to right.</desc>
       <defs>
         <circle id="deploy-dot" r="3.1" fill="currentColor" />
