@@ -25,7 +25,7 @@ export const button = {
 
       <P>
         Defaults to <InlineCode>type="button"</InlineCode> so it never submits forms by accident.
-        Submit buttons get a subtle press animation.
+        While pressed it scales to 97%, unless the reader prefers reduced motion.
       </P>
 
       <H2>Sizes</H2>
