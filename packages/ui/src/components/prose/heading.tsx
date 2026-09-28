@@ -1,11 +1,10 @@
-import type { PropsWithChildren } from "react";
+import type { ComponentProps, PropsWithChildren } from "react";
 import { cn } from "@oikos/ui/lib/cn";
 import { slugify } from "@oikos/ui/lib/slugify";
 
-type HeadingProps = PropsWithChildren<{
+type HeadingProps = ComponentProps<"h2"> & {
   as: "h2" | "h3";
-  className: string;
-}>;
+};
 
 type AnchorLinkProps = PropsWithChildren<{
   href: string;
@@ -30,33 +29,45 @@ function AnchorLink({ href, children }: AnchorLinkProps) {
   );
 }
 
-/** Only string headings get an id, because a slug needs text to derive one from. */
-function Heading({ as: Tag, className, children }: HeadingProps) {
-  if (typeof children !== "string") {
-    return <Tag className={className}>{children}</Tag>;
+/** A heading links to itself when it has an id, given by the caller or derived from its text. */
+function Heading({ as: Tag, id, className, children, ...props }: HeadingProps) {
+  const anchor = id ?? (typeof children === "string" ? slugify(children) : undefined);
+
+  if (!anchor) {
+    return (
+      <Tag className={className} {...props}>
+        {children}
+      </Tag>
+    );
   }
 
-  const id = slugify(children);
-
   return (
-    <Tag id={id} className={cn("group", className)}>
-      <AnchorLink href={`#${id}`}>{children}</AnchorLink>
+    <Tag id={anchor} className={cn("group", className)} {...props}>
+      <AnchorLink href={`#${anchor}`}>{children}</AnchorLink>
     </Tag>
   );
 }
 
-export function H2({ children }: PropsWithChildren) {
+export type H2Props = ComponentProps<"h2">;
+
+export function H2({ className, ...props }: H2Props) {
   return (
-    <Heading as="h2" className="mt-10 text-lg font-medium tracking-tight text-balance">
-      {children}
-    </Heading>
+    <Heading
+      as="h2"
+      className={cn("mt-10 text-lg font-medium tracking-tight text-balance", className)}
+      {...props}
+    />
   );
 }
 
-export function H3({ children }: PropsWithChildren) {
+export type H3Props = ComponentProps<"h3">;
+
+export function H3({ className, ...props }: H3Props) {
   return (
-    <Heading as="h3" className="mt-8 text-base font-medium tracking-tight text-balance">
-      {children}
-    </Heading>
+    <Heading
+      as="h3"
+      className={cn("mt-8 text-base font-medium tracking-tight text-balance", className)}
+      {...props}
+    />
   );
 }

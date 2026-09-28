@@ -1,11 +1,9 @@
-import type { PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
 import { cn } from "@oikos/ui/lib/cn";
 
-type CalloutProps = PropsWithChildren<{
-  className?: string;
-}>;
+export type CalloutProps = ComponentProps<"aside">;
 
-export function Callout({ className, children }: CalloutProps) {
+export function Callout({ className, ...props }: CalloutProps) {
   return (
     <aside
       className={cn(
@@ -14,8 +12,7 @@ export function Callout({ className, children }: CalloutProps) {
         "border-hairline border-current/6 bg-neutral-100/60 dark:bg-neutral-900/60",
         className,
       )}
-    >
-      {children}
-    </aside>
+      {...props}
+    />
   );
 }

@@ -1,14 +1,18 @@
-import type { ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
+import { cn } from "@oikos/ui/lib/cn";
 
-type TableProps = {
+export type TableProps = Omit<ComponentProps<"div">, "children"> & {
   head: ReactNode[];
   rows: ReactNode[][];
 };
 
 /** Cells are authored prose, so their position is their identity. */
-export function Table({ head, rows }: TableProps) {
+export function Table({ head, rows, className, ...props }: TableProps) {
   return (
-    <div className="overflow-x-auto rounded-lg border-hairline border-current/10">
+    <div
+      className={cn("overflow-x-auto rounded-lg border-hairline border-current/10", className)}
+      {...props}
+    >
       <table className="w-full text-left text-sm tabular-nums">
         <thead>
           <tr className="border-b-hairline border-current/10 text-foreground/80">

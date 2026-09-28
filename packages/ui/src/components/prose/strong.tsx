@@ -1,5 +1,13 @@
-import type { PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
+import { cn } from "@oikos/ui/lib/cn";
 
-export function Strong({ children }: PropsWithChildren) {
-  return <strong className="font-medium text-neutral-800 dark:text-neutral-200">{children}</strong>;
+export type StrongProps = ComponentProps<"strong">;
+
+export function Strong({ className, ...props }: StrongProps) {
+  return (
+    <strong
+      className={cn("font-medium text-neutral-800 dark:text-neutral-200", className)}
+      {...props}
+    />
+  );
 }

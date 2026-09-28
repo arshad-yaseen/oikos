@@ -1,5 +1,8 @@
-import type { PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
+import { cn } from "@oikos/ui/lib/cn";
 
-export function P({ children }: PropsWithChildren) {
-  return <p className="text-base/8 text-pretty text-foreground/75">{children}</p>;
+export type PProps = ComponentProps<"p">;
+
+export function P({ className, ...props }: PProps) {
+  return <p className={cn("text-base/8 text-pretty text-foreground/75", className)} {...props} />;
 }

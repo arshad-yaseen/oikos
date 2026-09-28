@@ -1,12 +1,12 @@
 "use client";
 
-import type { CSSProperties } from "react";
+import { useRender } from "@base-ui/react/use-render";
 import { useEffect, useRef } from "react";
 import { highlight } from "sugar-high";
 import type { LanguageName, TokenType } from "sugar-high";
 import { cn } from "@oikos/ui/lib/cn";
 
-type CodeBlockProps = {
+export type CodeBlockProps = Omit<useRender.ComponentProps<"div">, "children"> & {
   code: string;
   lang?: LanguageName;
 };
@@ -28,11 +28,19 @@ const THEME = {
   "--sh-comment": "light-dark(#4d4d4d, #a0a0a0)",
 } satisfies Partial<Record<`--sh-${TokenType}`, string>>;
 
-export function CodeBlock({ code, lang = DEFAULT_LANG }: CodeBlockProps) {
-  const ref = useRef<HTMLDivElement>(null);
+export function CodeBlock({
+  code,
+  lang = DEFAULT_LANG,
+  render,
+  ref,
+  className,
+  style,
+  ...props
+}: CodeBlockProps) {
+  const internalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const element = ref.current;
+    const element = internalRef.current;
     if (!element) {
       return;
     }
@@ -55,20 +63,24 @@ export function CodeBlock({ code, lang = DEFAULT_LANG }: CodeBlockProps) {
     };
   }, []);
 
-  return (
-    <div
-      ref={ref}
-      data-slot="code-block"
-      className={cn(
+  return useRender({
+    render,
+    ref: [internalRef, ref ?? null],
+    props: {
+      "data-slot": "code-block",
+      ...props,
+      className: cn(
         "max-h-120 overflow-auto rounded-lg p-4 text-sm/6",
         "border-hairline border-current/10",
         "[&_pre]:focus-visible:outline-hidden",
-      )}
-      style={THEME as CSSProperties}
-    >
-      <pre tabIndex={0}>
-        <code dangerouslySetInnerHTML={{ __html: highlight(code.trim(), { lang }) }} />
-      </pre>
-    </div>
-  );
+        className,
+      ),
+      style: { ...THEME, ...style },
+      children: (
+        <pre tabIndex={0}>
+          <code dangerouslySetInnerHTML={{ __html: highlight(code.trim(), { lang }) }} />
+        </pre>
+      ),
+    },
+  });
 }
