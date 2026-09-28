@@ -65,7 +65,7 @@ Type is tiered by size and color, and emphasized by weight. Thirteen pixels is t
 | Title   | `text-2xl`    | 24px        | Page titles (h1)                       |
 | Display | `text-3xl+`   | 30px and up | Long form and hero titles              |
 
-Numeric leadings like `/6` ride the spacing scale, so line heights compact with everything else. Long form prose is the exception and keeps a leading near 1.75 however dense the chrome gets. Weights are tokens too: normal 400, medium 510, semibold 590, bold 680, tuned optically for the variable font.
+Numeric leadings like `/6` ride the spacing scale, so line heights compact with everything else. Long form prose is the exception and keeps a leading near 1.75 however dense the chrome gets.
 
 - **Hierarchy comes from type first.** Tier, weight, and color before a surface, a border, or an accent.
 - **Emphasize with weight and color, never a size bump.** Nothing renders lighter than 400, headings sit between 500 and 600.

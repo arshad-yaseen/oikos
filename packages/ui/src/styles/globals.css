@@ -27,12 +27,6 @@
   --text-2xs--letter-spacing: 0.02em;
 
   --radius-md: 0.3125rem;
-
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 510;
-  --font-weight-semibold: 590;
-  --font-weight-bold: 680;
 }
 
 @theme inline {
