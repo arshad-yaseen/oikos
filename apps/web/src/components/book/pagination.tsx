@@ -3,7 +3,7 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { Page } from "@/lib/content";
+import type { NavItem } from "@/lib/content";
 import { Icon } from "@oikos/ui/components/icon";
 import { cn } from "@oikos/ui/lib/cn";
 
@@ -16,7 +16,7 @@ const CHEVRON = cn(
 
 type PaginationProps = {
   /** In reading order. */
-  pages: Page[];
+  pages: NavItem[];
 };
 
 export function Pagination({ pages }: PaginationProps) {
@@ -41,7 +41,7 @@ export function Pagination({ pages }: PaginationProps) {
           <Icon name="ChevronLeft" className={cn(CHEVRON, "-ml-6")} />
           <span className="flex flex-col gap-1">
             <span className="text-sm text-neutral-600 dark:text-neutral-400">Previous</span>
-            <span className="text-sm font-medium">{previous.article.title}</span>
+            <span className="text-sm font-medium">{previous.title}</span>
           </span>
         </Link>
       ) : (
@@ -51,7 +51,7 @@ export function Pagination({ pages }: PaginationProps) {
         <Link href={next.href as Route} className="group flex items-start gap-2 text-right">
           <span className="flex flex-col gap-1">
             <span className="text-sm text-neutral-600 dark:text-neutral-400">Next</span>
-            <span className="text-sm font-medium">{next.article.title}</span>
+            <span className="text-sm font-medium">{next.title}</span>
           </span>
           <Icon name="ChevronRight" className={cn(CHEVRON, "-mr-6")} />
         </Link>
